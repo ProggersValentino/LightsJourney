@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eeb14914b9262b47b0c9299a8cf0f50, type: 3}
+  m_Name: EGun
+  m_EditorClassIdentifier: 
+  projectileBased: 1
+  rayBased: 0
+  bullet: {fileID: 3332197088016315777, guid: f95d25097a8e4c243babf1a5b729e6ee, type: 3}
+  shootForce: 10
+  upwardForce: 0
+  TBShooting: 0
+  spread: 0
+  reloadT: 1
+  TBShots: 2
+  magSize: 6
+  bulletsPerTap: 1
+  allowButtonHold: 0
+  range: 0
+  dmg: 0
+  recoilForce: 0
+  showBulletVariables: 1
+  showRaycastVariables: 0
