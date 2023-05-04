@@ -100,7 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 40d19f5a6c6fb144caa99034b1fcf5bb, type: 2}
   damage: 0
-  currentHealth: 10
+  currentHealth: 0
+  regenAfterSec: 10
+  timer: 0
 --- !u!65 &2869419113532120166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -155,7 +157,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7901431281828986144}
   serializedVersion: 8
-  lengthInSec: 0.05
+  lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0

@@ -107,7 +107,7 @@ public class gunBehav : MonoBehaviour
         if (!Input.GetKey(KeyCode.Mouse0) && bulletsLeft < gunType.magSize)
         {
             StartCoroutine(regenLight());
-            Debug.Log(bulletsLeft);
+            // Debug.Log(bulletsLeft);
         }
         else
         {
@@ -219,7 +219,7 @@ public class gunBehav : MonoBehaviour
             
         }
         bulletsLeft--;
-        Debug.Log(bulletsLeft);
+        // Debug.Log(bulletsLeft);
         
         //invoke resetShot function (if not already invoked), with your TbShooting
         if (allowInvoke)

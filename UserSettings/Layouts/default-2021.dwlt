@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 2083
+  controlID: 17
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 362.40002
     height: 722.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 2084
+  controlID: 71
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 2085
+  controlID: 72
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -344,22 +344,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Uni\Semester 1 2023\IGB100\Assessment\Assessment 2\Backup\Jaming-Game-IGB100
+  m_LastProjectPath: C:\Uni\Semester 1 2023\IGB100\Assessment\Assessment 2\LightsJourney\LightsJourney
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 76e10000
-    m_LastClickedID: 57718
-    m_ExpandedIDs: 0000000060e10000ffffff7f
+    scrollPos: {x: 0, y: 2.2000122}
+    m_SelectedIDs: 0e6d0000
+    m_LastClickedID: 27918
+    m_ExpandedIDs: 000000004e6b0000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -387,7 +387,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 000000004e6b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -479,7 +479,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 378
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -517,9 +517,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 6a1a0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 384bffff7081ffff2c82ffff3882ffff5c8dffff1690ffff
+      m_ExpandedIDs: 1afbffff4c680000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -769,9 +769,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -23.978542, y: -0.785326, z: -5.9278316}
+    m_Target: {x: 8.234943, y: -1.5795187, z: -2.4901187}
     speed: 2
-    m_Value: {x: -23.978542, y: -0.785326, z: -5.9278316}
+    m_Value: {x: 8.234943, y: -1.5795187, z: -2.4901187}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -818,13 +818,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.19333936, y: 0.1468424, z: -0.029274542, w: -0.9696474}
+    m_Target: {x: -0.15835227, y: -0.7448372, z: 0.19035807, w: -0.61963177}
     speed: 2
-    m_Value: {x: -0.19324914, y: 0.1497495, z: -0.029854191, w: -0.9691949}
+    m_Value: {x: -0.15834929, y: -0.7448232, z: 0.19035448, w: -0.6196201}
   m_Size:
-    m_Target: 14.077601
+    m_Target: 7.343381
     speed: 2
-    m_Value: 14.740944
+    m_Value: 7.343381
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -963,10 +963,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2249
-    y: 726.5
-    width: 920
-    height: 250
+    x: 0
+    y: 501.6
+    width: 1172.6
+    height: 273.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

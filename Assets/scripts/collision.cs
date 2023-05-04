@@ -21,7 +21,7 @@ public class collision : MonoBehaviour
         currentHealth = stats.maxHealth;
     }
     
-
+    //when in fog
    private void OnTriggerStay(Collider other)
    {
        if (other.CompareTag("Darkness"))
@@ -30,7 +30,8 @@ public class collision : MonoBehaviour
            Debug.Log(currentHealth);
        }
    }
-
+    
+   //when interacting with keys
    private void OnTriggerEnter(Collider other)
    {
        if (other.CompareTag("k1"))
@@ -53,7 +54,8 @@ public class collision : MonoBehaviour
        }
    }
 
-
+    
+   //when colliding physically with enemies
    private void OnCollisionEnter(Collision other)
    {
        if (other.collider.CompareTag("Enemy"))

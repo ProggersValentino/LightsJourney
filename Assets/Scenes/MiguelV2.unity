@@ -4749,20 +4749,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1367749046}
     m_Modifications:
-    - target: {fileID: -8752144896350886514, guid: 27a8c81525e44f944b21a5df0a5c7968,
-        type: 3}
-      propertyPath: currentHealth
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3001564584997393008, guid: 27a8c81525e44f944b21a5df0a5c7968,
         type: 3}
       propertyPath: m_Name
       value: ShadowBox
-      objectReference: {fileID: 0}
-    - target: {fileID: 3241164269617282937, guid: 27a8c81525e44f944b21a5df0a5c7968,
-        type: 3}
-      propertyPath: lengthInSec
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5255236568349397952, guid: 27a8c81525e44f944b21a5df0a5c7968,
         type: 3}
@@ -4818,11 +4808,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7901431281828986144, guid: 27a8c81525e44f944b21a5df0a5c7968,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27a8c81525e44f944b21a5df0a5c7968, type: 3}
