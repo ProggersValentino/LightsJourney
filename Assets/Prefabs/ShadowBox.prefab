@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7680790392967523691}
   - component: {fileID: -8752144896350886514}
   - component: {fileID: 2869419113532120166}
+  - component: {fileID: -7329434047258793596}
   m_Layer: 6
   m_Name: ShadowBox
   m_TagString: Darkness
@@ -113,6 +114,19 @@ BoxCollider:
   m_GameObject: {fileID: 3001564584997393008}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &-7329434047258793596
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3001564584997393008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -3928,7 +3942,7 @@ ParticleSystem:
     subEmitters:
     - serializedVersion: 3
       emitter: {fileID: 0}
-      type: 0
+      type: 3
       properties: 0
       emitProbability: 1
   LightsModule:
