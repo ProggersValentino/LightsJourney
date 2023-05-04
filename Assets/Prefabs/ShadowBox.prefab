@@ -103,6 +103,7 @@ MonoBehaviour:
   currentHealth: 0
   regenAfterSec: 10
   timer: 0
+  manageDownSoldiers: {fileID: 0}
 --- !u!65 &2869419113532120166
 BoxCollider:
   m_ObjectHideFlags: 0
