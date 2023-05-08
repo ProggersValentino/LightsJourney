@@ -13,12 +13,13 @@ public class collision : MonoBehaviour
     public float dmgTick;
     
     //collection of keys 
-    public GatewaySys keyColl;
+    inventory keyColl;
     
 
     private void Awake()
     {
         currentHealth = stats.maxHealth;
+        keyColl = GetComponent<inventory>();
     }
     
     //when in fog
@@ -34,24 +35,23 @@ public class collision : MonoBehaviour
    //when interacting with keys
    private void OnTriggerEnter(Collider other)
    {
-       if (other.CompareTag("k1"))
+       if (other.CompareTag("key"))
        {
-           keyColl.k1Found = true;
-           Debug.Log(keyColl.k1Found);
+           keyColl.keys++;
            Destroy(other.gameObject);
        }
-       else if (other.CompareTag("k2"))
-       {
-           keyColl.k2Found = true;
-           Debug.Log(keyColl.k2Found);
-           Destroy(other.gameObject);
-       }
-       else if (other.CompareTag("k3"))
-       {
-           keyColl.k3Found = true;
-           Debug.Log(keyColl.k3Found);
-           Destroy(other.gameObject);
-       }
+       // else if (other.CompareTag("k2"))
+       // {
+       //     keyColl.k2Found = true;
+       //     Debug.Log(keyColl.k2Found);
+       //     Destroy(other.gameObject);
+       // }
+       // else if (other.CompareTag("k3"))
+       // {
+       //     keyColl.k3Found = true;
+       //     Debug.Log(keyColl.k3Found);
+       //     Destroy(other.gameObject);
+       // }
    }
 
     

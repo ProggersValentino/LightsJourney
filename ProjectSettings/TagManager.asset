@@ -11,6 +11,7 @@ TagManager:
   - k1
   - k2
   - k3
+  - key
   layers:
   - Default
   - TransparentFX
@@ -23,8 +24,8 @@ TagManager:
   - pBull
   - eBull
   - PostFX
-  - 
-  - 
+  - whatIsFog
+  - whatIsInteractable
   - 
   - 
   - 
