@@ -35,24 +35,7 @@ public class darknessHealth : MonoBehaviour
 
         FogTriggered += OnFogTriggered; //subscribed to OnfogTriggered
         
-        Debug.Log(FogTriggered?.GetInvocationList().Length);
-    }
-
-    private void Update()
-    {
-        // if(fogDied)
-        // {
-        //     timer -= Time.deltaTime;
-        // }
-        //
-        // if (timer <= 0)
-        // {
-        //     TriggerFog();
-        //     timer = regenAfterSec;
-        //     fogDied = false;
-        // }
-        //
-        
+        // Debug.Log(FogTriggered?.GetInvocationList().Length);
     }
     
     //takes damage
@@ -83,16 +66,13 @@ public class darknessHealth : MonoBehaviour
     //to regenerate fog
     public void OnFogTriggered()
     {
-        // Debug.Log("fogdone");  
         var main = ps.main;
         
-        // Debug.Log("yes"); 
         // The cooldown time has elapsed, so trigger the fog and update the last trigger time
         shadowBox.enabled = true;
         main.loop = true;
         ps.Play();
-        // whenDied = Time.time;
-            
+
         //reset health
         currentHealth = stats.maxHealth;
 
@@ -102,9 +82,6 @@ public class darknessHealth : MonoBehaviour
     // Method for triggering the fog externally
     public void TriggerFog()
     {
-        // Debug.Log("TriggerFog called");
-
-        // Debug.Log(Time.time);
         // Raise the event for triggering the fog
         FogTriggered?.Invoke();
     }

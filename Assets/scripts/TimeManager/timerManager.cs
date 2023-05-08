@@ -9,7 +9,6 @@ public class timerManager : MonoBehaviour
     
     private void Update()
     {
-
         if (managingTime != null)
         {
             for (int i = managingTime.Count - 1; i >= 0; i--)
@@ -37,7 +36,7 @@ public class timeItem
     /// constructer for adding items to list
     /// </summary>
     /// <param name="fog"> the gameobject that fogs your screen</param>
-    /// <param name="time"></param>
+    /// <param name="time">The cooldown time for the fog to regenerate back</param>
     public timeItem(darknessHealth fog, float time)
     {
         regening = fog;
