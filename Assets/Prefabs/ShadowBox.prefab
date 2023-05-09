@@ -149,7 +149,9 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: 40d19f5a6c6fb144caa99034b1fcf5bb, type: 2}
   damage: 0
   currentHealth: 0
-  regenAfterSec: 5
+  volumetric: {fileID: 7428792466009710260}
+  laserCollider: {fileID: 2123077173}
+  regenAfterSec: 20
   timer: 0
   manageDownSoldiers: {fileID: 0}
 --- !u!65 &2869419113532120166

@@ -12,6 +12,8 @@ public class darknessHealth : MonoBehaviour
 
     private ParticleSystem ps;
     private BoxCollider shadowBox;
+    public BoxCollider volumetric;
+    public BoxCollider laserCollider;
 
     public float regenAfterSec;
     public float timer = 0f;
@@ -30,6 +32,7 @@ public class darknessHealth : MonoBehaviour
 
         ps = GetComponentInChildren<ParticleSystem>();
         shadowBox = GetComponent<BoxCollider>();
+        // volumetric = GetComponentInChildren<BoxCollider>();
 
         timer = regenAfterSec;
 
@@ -60,6 +63,8 @@ public class darknessHealth : MonoBehaviour
         var main = ps.main; //accessing the particle system 
         shadowBox.enabled = false;
         main.loop = false;
+        volumetric.enabled = false;
+        laserCollider.enabled = false;
         manageDownSoldiers.managingTime.Add(new timeItem(this, regenAfterSec + Time.time));
     }
     
@@ -71,6 +76,8 @@ public class darknessHealth : MonoBehaviour
         // The cooldown time has elapsed, so trigger the fog and update the last trigger time
         shadowBox.enabled = true;
         main.loop = true;
+        volumetric.enabled = true;
+        laserCollider.enabled = true;
         ps.Play();
 
         //reset health
