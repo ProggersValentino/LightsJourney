@@ -1,18 +1,20 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GatewaySys : MonoBehaviour
 {
     public bool k1Found, k2Found, k3Found;
     public GameObject[] keys;
+    public GameObject[] keyGuidance;
 
     public GameObject doorMesh;
     private BoxCollider portal;
 
     public interact rayInformation;
-    
+
     public enum doorState
     {
         locked,
@@ -62,6 +64,39 @@ public class GatewaySys : MonoBehaviour
         }
     }
 
+    public void findKeys()
+    {
+        if (rayInformation.rayHit.collider.name == "KeyAlter_L")
+        {
+           accessingParticles(keyGuidance[0]);
+           Debug.Log(keyGuidance[0].name);
+        }
+
+        if (rayInformation.rayHit.collider.name == "KeyAlter_R")
+        { 
+            accessingParticles(keyGuidance[1]);
+            Debug.Log(keyGuidance[1].name);
+        }
+
+        if (rayInformation.rayHit.collider.name == "KeyAlter_Mid")
+        {
+            accessingParticles(keyGuidance[2]);
+            Debug.Log(keyGuidance[2 ].name);
+        }
+        
+    }
+    
+    //goes through a activates all the particle systems within the gameobject container
+    public void accessingParticles(GameObject containers)
+    {
+        ParticleSystem[] partSys = containers.GetComponentsInChildren<ParticleSystem>();
+        foreach (ParticleSystem part in partSys)
+        {
+            part.Play();
+        }
+    }
+    
+    
     public void unlockingDoor()
     {
         if (rayInformation.rayHit.collider.name == "KeyAlter_L" )

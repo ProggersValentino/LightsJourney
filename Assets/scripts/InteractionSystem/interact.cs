@@ -3,19 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class interact : MonoBehaviour
 {
     [SerializeField] private Transform interactionPoint;
     [SerializeField] private float interactPRadius;
     [SerializeField] private LayerMask interactableMask;
+    [SerializeField] private interactHoverUI hoverUI;
+    
     
     //keycode for interacting 
     public KeyCode interactKey;
     
     //events that will happen
-    public UnityEvent interactEvents;
-    
+    public UnityEvent keyInteractEvents;
+    public UnityEvent keyFinder;
+
     //fpsCam
     public Camera fpsCam;
     public RaycastHit rayHit;
@@ -23,10 +27,12 @@ public class interact : MonoBehaviour
     public LayerMask whatIsInteract;
     
     //inventory
-    private inventory keyInventory; 
+    private inventory keyInventory;
+
+    private IInteractable interactable;
     
-    public Collider[] colliders = new Collider[1];
-    public int numFound;
+    // public Collider[] colliders = new Collider[1];
+    // public int numFound;
 
     private void Start()
     {
@@ -44,24 +50,43 @@ public class interact : MonoBehaviour
         if (Physics.Raycast(ray, out rayHit, viewRange,
                 whatIsInteract))
         {
-            var interactable = rayHit.collider.GetComponent<IInteractable>(); //find any monobehav that is incorporating the Interface 
+            interactable = rayHit.collider.GetComponent<IInteractable>(); //find any monobehav that is incorporating the Interface 
+            
+            
+            
+           
             
             //checks to see if player has keys 
             if (keyInventory.keys > 0)
-            {
-                //if the player in looking at an interactable and presses the interactable key then execute loop
-                if (interactable != null && Input.GetKeyDown(interactKey))
+            { 
+                    //if the player in looking at an interactable and presses the interactable key then execute loop
+                if (interactable != null)
                 {
-                    interactable.interact(this); //making the player the interactor
-                    interactEvents.Invoke(); //activate unity event 
-                    Debug.Log(rayHit.collider.name);
+                    if(!hoverUI.isDisplayed) hoverUI.SetUp(interactable.hasKey);
+                    
+                    if (Input.GetKeyDown(interactKey))
+                    {
+                        interactable.interact(this); //making the player the interactor
+                        keyInteractEvents.Invoke(); //activate unity event 
+                        Debug.Log(rayHit.collider.name);    
+                    }
+                    
                 }
             }
             else if(Input.GetKeyDown(interactKey))
             {
                 interactable.interact(this);
+                keyFinder.Invoke();
+            }
+            else
+            {
+                if(!hoverUI.isDisplayed) hoverUI.SetUp(interactable.interactionPrompt);
             }
                 
+        }
+        else
+        {
+            hoverUI.close();
         }
 
         // if (numFound > 0)
