@@ -85,6 +85,8 @@ public class movement : MonoBehaviour
         //checking to see if player is grounded
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHei * 0.5f + 0.2F, whatIsGround);
         
+        
+        Debug.Log(grounded);
         //manipulates drag depending on if grounded or not
         if (grounded)
         {
@@ -263,7 +265,12 @@ public class movement : MonoBehaviour
     {
         return Vector3.ProjectOnPlane(moveDirection, slopeHit.normal).normalized;
     }
-    
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position - Vector3.up * (playerHei * 0.5f + 0.2F));
+    }
 }
 //making it serializable so that it can be edited within the inspector 
 [System.Serializable]
@@ -272,3 +279,5 @@ public class bindingKeys
     public string action;
     public KeyCode keyCode;
 }
+
+

@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 
 public class interact : MonoBehaviour
 {
-    [SerializeField] private Transform interactionPoint;
+    // [SerializeField] private Transform interactionPoint;
     [SerializeField] private float interactPRadius;
     [SerializeField] private LayerMask interactableMask;
     [SerializeField] private interactHoverUI hoverUI;
@@ -62,7 +62,7 @@ public class interact : MonoBehaviour
                     //if the player in looking at an interactable and presses the interactable key then execute loop
                 if (interactable != null)
                 {
-                    if(!hoverUI.isDisplayed) hoverUI.SetUp(interactable.hasKey);
+                    // if(!hoverUI.isDisplayed) hoverUI.SetUp(interactable.hasKey);
                     
                     if (Input.GetKeyDown(interactKey))
                     {
@@ -84,10 +84,10 @@ public class interact : MonoBehaviour
             }
                 
         }
-        else
-        {
-            hoverUI.close();
-        }
+        // else
+        // {
+        //     hoverUI.close();
+        // }
 
         // if (numFound > 0)
         // {
@@ -101,10 +101,11 @@ public class interact : MonoBehaviour
         // }
         
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(interactionPoint.position, interactPRadius);
-    }
+    //
+    // private void OnDrawGizmos()
+    // {
+    //     Gizmos.color = Color.red;
+    //     Gizmos.DrawWireSphere(interactionPoint.position, interactPRadius);
+    // }
 }
+
