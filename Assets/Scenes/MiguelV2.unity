@@ -61281,7 +61281,7 @@ PrefabInstance:
     - target: {fileID: 8246183072915424924, guid: f49c63901b7897947bd2a574f48ffc07,
         type: 3}
       propertyPath: lightRegen
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f49c63901b7897947bd2a574f48ffc07, type: 3}
@@ -74025,6 +74025,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0cbd00e5d7d9ecd46bee4004a927b717,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3681790978099765340, guid: 0cbd00e5d7d9ecd46bee4004a927b717,
         type: 3}

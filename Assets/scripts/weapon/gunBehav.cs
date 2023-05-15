@@ -4,16 +4,18 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class gunBehav : MonoBehaviour
 {
     //accessing the data from the scriptable object
-    public GStatsSO gunType;
+    public GStatsSO primaryGun;
+    public GStatsSO secondaryGun;
     public LayerMask whatIsEnemy;
     
     //bools
-    private bool shooting, RTS, reloading; //RTS = ready to shoot
+    private bool shooting, shootingSecond, RTS, reloading; //RTS = ready to shoot
     public bool isPlayer;
     public bool usingLight;
 
@@ -42,7 +44,7 @@ public class gunBehav : MonoBehaviour
     private void Awake() 
     {
         //ensuring mags are full
-        bulletsLeft = gunType.magSize;
+        bulletsLeft = primaryGun.magSize;
         RTS = true;
         // laserLine = GetComponent<LineRenderer>();
     }
@@ -65,11 +67,19 @@ public class gunBehav : MonoBehaviour
     void PInput()
     {
         //checking to see if player is allowed to hold  down the button
-        if(gunType.allowButtonHold) shooting = Input.GetKey(KeyCode.Mouse0);
-        else shooting = Input.GetKeyDown(KeyCode.Mouse0);
+        if (primaryGun.allowButtonHold || secondaryGun.allowButtonHold)
+        {
+            shootingSecond = Input.GetKey(KeyCode.Mouse1);
+            shooting = Input.GetKey(KeyCode.Mouse0);
+        }
+        else
+        {
+            shootingSecond = Input.GetKeyDown(KeyCode.Mouse1);
+            shooting = Input.GetKeyDown(KeyCode.Mouse0);
+        }
 
         //reloading input
-        if(Input.GetKeyDown(KeyCode.R) && bulletsLeft < gunType.magSize && !reloading)
+        if(Input.GetKeyDown(KeyCode.R) && bulletsLeft < primaryGun.magSize && !reloading)
         {
             reload();
         }
@@ -79,16 +89,16 @@ public class gunBehav : MonoBehaviour
         }
 
         //shooting
-        if(RTS && shooting && !reloading && bulletsLeft > 0)
+        if(RTS && shooting || shootingSecond && !reloading && bulletsLeft > 0)
         {
             //set bullets shot to 0
-            bulletsShot = gunType.bulletsPerTap;
+            bulletsShot = primaryGun.bulletsPerTap;
 
-            if (gunType.projectileBased && !gunType.rayBased)
+            if (secondaryGun.projectileBased && !secondaryGun.rayBased && shootingSecond)
             {
                 fire();
             }
-            else if (!gunType.projectileBased && gunType.rayBased)
+            else if (!primaryGun.projectileBased && primaryGun.rayBased && shooting)
             {
                 //laser beam
                 lightBeam.Play(); //enables laser when player is firing
@@ -105,7 +115,7 @@ public class gunBehav : MonoBehaviour
             lightBeam.Stop(); //disables laser when player stops pressing fire button
         }
         
-        if (!Input.GetKey(KeyCode.Mouse0) && bulletsLeft < gunType.magSize)
+        if (!Input.GetKey(KeyCode.Mouse0) && bulletsLeft < primaryGun.magSize)
         {
             StartCoroutine(regenLight());
             // Debug.Log(bulletsLeft);
@@ -140,21 +150,21 @@ public class gunBehav : MonoBehaviour
         Vector3 directionWithoutSpread = targetPoint - ProjLaunchPoint.position;
 
         //calculate spread
-        float x = Random.Range(-gunType.spread, gunType.spread);
-        float y = Random.Range(-gunType.spread, gunType.spread);
+        float x = Random.Range(-secondaryGun.spread, secondaryGun.spread);
+        float y = Random.Range(-secondaryGun.spread, secondaryGun.spread);
 
         //calculate new direction with spread
         Vector3 directionWithSpread = directionWithoutSpread + new Vector3(x, y, 0); //just dd spread spread to last
 
         //instantiate projectile
-        GameObject currentBullet = Instantiate(gunType.bullet, ProjLaunchPoint.position, Quaternion.identity); //store instantiate projectile within GameObject
+        GameObject currentBullet = Instantiate(secondaryGun.bullet, ProjLaunchPoint.position, Quaternion.identity); //store instantiate projectile within GameObject
 
         //rotate bullet to face direction its been shot out keeping it consistent 
         currentBullet.transform.forward = directionWithSpread.normalized;
         
         //add forces to bullets
-        currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * gunType.shootForce, ForceMode.Impulse); //forward direction of bullet
-        currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * gunType.upwardForce, ForceMode.Impulse); // to add upward force to any bullets (like grenade launchers)
+        currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * secondaryGun.shootForce, ForceMode.Impulse); //forward direction of bullet
+        currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * secondaryGun.upwardForce, ForceMode.Impulse); // to add upward force to any bullets (like grenade launchers)
 
 
         bulletsLeft--;
@@ -163,16 +173,16 @@ public class gunBehav : MonoBehaviour
         //invoke resetShot function (if not already invoked), with your TbShooting
         if (allowInvoke)
         {
-            Invoke("ResetShot", gunType.TBShooting);
+            Invoke("ResetShot", secondaryGun.TBShooting);
             allowInvoke = false;
 
-            playerRb.AddForce(-directionWithSpread.normalized * gunType.recoilForce, ForceMode.Impulse); //adds recoil to gun. this has been placed so it only happens once every tap
+            playerRb.AddForce(-directionWithSpread.normalized * secondaryGun.recoilForce, ForceMode.Impulse); //adds recoil to gun. this has been placed so it only happens once every tap
         }
 
         //if more than one bulletsPerTap make sure to repeat shoot function
-        if (bulletsShot < gunType.bulletsPerTap && bulletsLeft > 0)
+        if (bulletsShot < secondaryGun.bulletsPerTap && bulletsLeft > 0)
         {
-            Invoke("fire", gunType.TBShots);
+            Invoke("fire", secondaryGun.TBShots);
         }
 
     }
@@ -184,26 +194,26 @@ public class gunBehav : MonoBehaviour
         // laserLine.enabled = true;
         
         
-        float x = Random.Range(-gunType.spread, gunType.spread);
-        float y = Random.Range(-gunType.spread, gunType.spread);
+        float x = Random.Range(-primaryGun.spread, primaryGun.spread);
+        float y = Random.Range(-primaryGun.spread, primaryGun.spread);
         
         //calculate new direction with spread
         Vector3 direction = fpsCam.transform.forward + new Vector3(x, y, 0f); //just dd spread spread to last
         
-        if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, gunType.range,
+        if (Physics.Raycast(fpsCam.transform.position, direction, out rayHit, primaryGun.range,
                 whatIsEnemy))
         {
             
             if (rayHit.collider.CompareTag("Enemy"))
             {
                 Debug.Log(rayHit.collider.name);
-                rayHit.collider.GetComponent<enemyCollision>().TakeDamage(gunType.dmg);
+                rayHit.collider.GetComponent<enemyCollision>().TakeDamage(primaryGun.dmg);
             }
 
             else if (rayHit.collider.CompareTag("Darkness"))
             {
                 Debug.Log(rayHit.collider.name);
-                rayHit.collider.GetComponent<darknessHealth>().TakeDamage(gunType.dmg);
+                rayHit.collider.GetComponent<darknessHealth>().TakeDamage(primaryGun.dmg);
                 Debug.Log(rayHit.collider.GetComponent<darknessHealth>().currentHealth);
             }
 
@@ -214,7 +224,7 @@ public class gunBehav : MonoBehaviour
         else
         {
             // if the raycast did not hit anything, draw the laser line to the maximum range
-            Vector3 endpoint = fpsCam.transform.position + (direction * gunType.range);
+            Vector3 endpoint = fpsCam.transform.position + (direction * primaryGun.range);
             // laserLine.SetPosition(0, ProjLaunchPoint.position);
             // laserLine.SetPosition(1, endpoint);
             
@@ -225,10 +235,10 @@ public class gunBehav : MonoBehaviour
         //invoke resetShot function (if not already invoked), with your TbShooting
         if (allowInvoke)
         {
-            Invoke("ResetShot", gunType.TBShooting);
+            Invoke("ResetShot", primaryGun.TBShooting);
             allowInvoke = false;
 
-            playerRb.AddForce(-direction.normalized * gunType.recoilForce, ForceMode.Impulse); //adds recoil to gun. this has been placed so it only happens once every tap
+            playerRb.AddForce(-direction.normalized * primaryGun.recoilForce, ForceMode.Impulse); //adds recoil to gun. this has been placed so it only happens once every tap
         }
         
         
@@ -247,21 +257,21 @@ public class gunBehav : MonoBehaviour
         if (!usingLight)
         {
             reloading = true;
-            Invoke("ReloadFinished", gunType.reloadT);    
+            Invoke("ReloadFinished", primaryGun.reloadT);    
         }
         
     }
 
     void ReloadFinished()
     {
-        bulletsLeft = gunType.magSize;
+        bulletsLeft = primaryGun.magSize;
         reloading = false;
     }
     
     private IEnumerator regenLight()
     {
         yield return new WaitForSeconds(2f); //slight delay before activating stamina regen
-        while (bulletsLeft < gunType.magSize)
+        while (bulletsLeft < primaryGun.magSize)
         {
             bulletsLeft += lightRegen;
             yield return new WaitForSeconds(1.5f); // wait for 1 second

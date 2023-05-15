@@ -1798,6 +1798,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'ground '
       objectReference: {fileID: 0}
+    - target: {fileID: 736164746336870986, guid: 2d4ec0d2103726e468805d07244618b2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d4ec0d2103726e468805d07244618b2, type: 3}
 --- !u!1001 &2203181328331133298
@@ -2260,6 +2265,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8246183072915424924, guid: f49c63901b7897947bd2a574f48ffc07,
+        type: 3}
+      propertyPath: primaryGun
+      value: 
+      objectReference: {fileID: 11400000, guid: bf5d0e42e5d3e61448db8b1be81a8ceb,
+        type: 2}
+    - target: {fileID: 8246183072915424924, guid: f49c63901b7897947bd2a574f48ffc07,
+        type: 3}
+      propertyPath: secondaryGun
+      value: 
+      objectReference: {fileID: 11400000, guid: fb8bbcd7be3051a4e9b8e73dd60e54c7,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f49c63901b7897947bd2a574f48ffc07, type: 3}
 --- !u!1001 &7556805085602690784

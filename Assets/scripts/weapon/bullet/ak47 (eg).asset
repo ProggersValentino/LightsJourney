@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd92adc8b7d7fc44be95dc4db6e3bac, type: 3}
   m_Name: ak47 (eg)
   m_EditorClassIdentifier: 
-  rb: {fileID: -5843970487707449568, guid: 734cdbe06c967ee45b1cd860930417f4, type: 3}
+  rb: {fileID: -5843970487707449568, guid: f95d25097a8e4c243babf1a5b729e6ee, type: 3}
   explosion: {fileID: 0}
   whatIsEnemies:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 72
   bounciness: 0
-  usesGravity: 0
+  usesGravity: 1
   directDmg: 20
   explosionDmg: 20
-  explosionRnge: 5
+  explosionRnge: 20
   explosionFce: 0
   maxCollisions: 1
   maxLifetime: 2
