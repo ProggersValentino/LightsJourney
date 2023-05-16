@@ -19,7 +19,7 @@ public class bulletBehav : MonoBehaviour
         maxLifetime = bulletType.maxLifetime;
         Setup();    
     }
-    void Update() 
+    void FixedUpdate() 
     {
         //checking when to explode
         if (collisions > bulletType.maxCollisions)
@@ -43,7 +43,7 @@ public class bulletBehav : MonoBehaviour
             Instantiate(bulletType.explosion, transform.position, Quaternion.identity);
         }
         
-        
+        Debug.Log(bulletType.explosion);
         // //check for enemies
         Collider[] enemies = Physics.OverlapSphere(transform.position, bulletType.explosionRnge, bulletType.whatIsEnemies);
 

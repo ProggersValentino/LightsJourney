@@ -22,7 +22,7 @@ MonoBehaviour:
   reloadT: 1
   TBShots: 1
   magSize: 6
-  bulletsPerTap: 1
+  bulletsPerTap: 0
   allowButtonHold: 0
   range: 0
   dmg: 0

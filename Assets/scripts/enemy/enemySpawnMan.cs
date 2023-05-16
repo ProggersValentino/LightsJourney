@@ -33,3 +33,13 @@ public class enemySpawnMan : MonoBehaviour
         }
 }
 
+///
+/// logic
+/// gameobnject that has coord of map boundaries
+/// instantiate spawner object (script attached) in a random location
+/// get players transform and have circle
+///
+/// vector3(player.x, y, player.z
+/// xpint = random.range(3, 20)
+/// zpint = random.range(3, 20)
+/// 

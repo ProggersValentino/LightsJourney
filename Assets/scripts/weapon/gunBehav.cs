@@ -19,7 +19,7 @@ public class gunBehav : MonoBehaviour
     public bool isPlayer;
     public bool usingLight;
 
-    public int bulletsLeft, bulletsShot;
+    public int bulletsLeft, bulletsLeft2, bulletsShot;
     
     //references
     public Camera fpsCam;
@@ -44,6 +44,7 @@ public class gunBehav : MonoBehaviour
     private void Awake() 
     {
         //ensuring mags are full
+        bulletsLeft2 = secondaryGun.magSize;
         bulletsLeft = primaryGun.magSize;
         RTS = true;
         // laserLine = GetComponent<LineRenderer>();
@@ -89,16 +90,12 @@ public class gunBehav : MonoBehaviour
         }
 
         //shooting
-        if(RTS && shooting || shootingSecond && !reloading && bulletsLeft > 0)
+        if(RTS && shooting && !reloading && bulletsLeft > 0)
         {
             //set bullets shot to 0
             bulletsShot = primaryGun.bulletsPerTap;
-
-            if (secondaryGun.projectileBased && !secondaryGun.rayBased && shootingSecond)
-            {
-                fire();
-            }
-            else if (!primaryGun.projectileBased && primaryGun.rayBased && shooting)
+            
+            if (!primaryGun.projectileBased && primaryGun.rayBased && shooting)
             {
                 //laser beam
                 lightBeam.Play(); //enables laser when player is firing
@@ -114,7 +111,17 @@ public class gunBehav : MonoBehaviour
             mainBeam.Stop();
             lightBeam.Stop(); //disables laser when player stops pressing fire button
         }
-        
+
+        if (RTS && shootingSecond && !reloading && bulletsLeft > 0)
+        {
+            bulletsShot = secondaryGun.bulletsPerTap;
+            
+            if (secondaryGun.projectileBased && !secondaryGun.rayBased && shootingSecond)
+            {
+                fire();
+            }
+        }
+
         if (!Input.GetKey(KeyCode.Mouse0) && bulletsLeft < primaryGun.magSize)
         {
             StartCoroutine(regenLight());
@@ -130,7 +137,7 @@ public class gunBehav : MonoBehaviour
     public void fire()
     {
         RTS = false;
-
+        Debug.Log(RTS);
         //Find the exact hit position using raycast
         Ray ray = fpsCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
         RaycastHit hit;
@@ -167,9 +174,10 @@ public class gunBehav : MonoBehaviour
         currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * secondaryGun.upwardForce, ForceMode.Impulse); // to add upward force to any bullets (like grenade launchers)
 
 
-        bulletsLeft--;
+        bulletsLeft2--;
         bulletsShot++;
 
+        // Invoke("ResetShot", primaryGun.TBShooting);
         //invoke resetShot function (if not already invoked), with your TbShooting
         if (allowInvoke)
         {
@@ -191,7 +199,7 @@ public class gunBehav : MonoBehaviour
     void fireNonProj()
     {
         RTS = false;
-        // laserLine.enabled = true;
+        
         
         
         float x = Random.Range(-primaryGun.spread, primaryGun.spread);

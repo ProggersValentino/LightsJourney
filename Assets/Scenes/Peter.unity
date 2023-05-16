@@ -2097,114 +2097,14 @@ PrefabInstance:
       objectReference: {fileID: 28348872}
     - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
         type: 3}
-      propertyPath: keyFinder.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: interactEvents.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: keyInteractEvents.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: keyFinder.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
       propertyPath: keyFinder.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 976765676}
     - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
         type: 3}
-      propertyPath: interactEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: keyFinder.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: keyFinder.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: findKeys
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: interactEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 976765676}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: keyInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: interactEvents.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
       propertyPath: keyInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 976765676}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: keyInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: keyInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: unlockingDoor
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: keyFinder.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GatewaySys, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: interactEvents.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: GatewaySys, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: keyInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GatewaySys, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: keyFinder.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: keyInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5001321192111538448, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5001321192111538448, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: m_VolumeLayerMask.m_Bits
-      value: 1024
-      objectReference: {fileID: 0}
-    - target: {fileID: 6458738763122090656, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6458738763122090665, guid: f49c63901b7897947bd2a574f48ffc07,
         type: 3}
       propertyPath: m_Name
@@ -2270,12 +2170,6 @@ PrefabInstance:
       propertyPath: primaryGun
       value: 
       objectReference: {fileID: 11400000, guid: bf5d0e42e5d3e61448db8b1be81a8ceb,
-        type: 2}
-    - target: {fileID: 8246183072915424924, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: secondaryGun
-      value: 
-      objectReference: {fileID: 11400000, guid: fb8bbcd7be3051a4e9b8e73dd60e54c7,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f49c63901b7897947bd2a574f48ffc07, type: 3}
