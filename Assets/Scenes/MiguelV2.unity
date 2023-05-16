@@ -4684,6 +4684,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShadowBox (600)
       objectReference: {fileID: 0}
+    - target: {fileID: 3001564584997393008, guid: 27a8c81525e44f944b21a5df0a5c7968,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5255236568349397952, guid: 27a8c81525e44f944b21a5df0a5c7968,
         type: 3}
       propertyPath: m_RootOrder
@@ -19149,6 +19154,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FogHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 1939678032661869455, guid: 072c111a0eec95f4db9ada8a9141c712,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2110031170822485065, guid: 072c111a0eec95f4db9ada8a9141c712,
         type: 3}
       propertyPath: regenAfterSec
@@ -19484,6 +19494,11 @@ PrefabInstance:
       propertyPath: manageDownSoldiers
       value: 
       objectReference: {fileID: 1582628200}
+    - target: {fileID: 5790681828879366747, guid: 072c111a0eec95f4db9ada8a9141c712,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5837797145011653128, guid: 072c111a0eec95f4db9ada8a9141c712,
         type: 3}
       propertyPath: regenAfterSec
@@ -19534,6 +19549,11 @@ PrefabInstance:
       propertyPath: manageDownSoldiers
       value: 
       objectReference: {fileID: 1582628200}
+    - target: {fileID: 6747922945154314047, guid: 072c111a0eec95f4db9ada8a9141c712,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6779518839791867388, guid: 072c111a0eec95f4db9ada8a9141c712,
         type: 3}
       propertyPath: regenAfterSec
@@ -19544,6 +19564,16 @@ PrefabInstance:
       propertyPath: manageDownSoldiers
       value: 
       objectReference: {fileID: 1582628200}
+    - target: {fileID: 6921851156643020297, guid: 072c111a0eec95f4db9ada8a9141c712,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089763456189178437, guid: 072c111a0eec95f4db9ada8a9141c712,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7116260837788922132, guid: 072c111a0eec95f4db9ada8a9141c712,
         type: 3}
       propertyPath: regenAfterSec
@@ -34420,6 +34450,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShadowBox (590)
       objectReference: {fileID: 0}
+    - target: {fileID: 3001564584997393008, guid: 27a8c81525e44f944b21a5df0a5c7968,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5255236568349397952, guid: 27a8c81525e44f944b21a5df0a5c7968,
         type: 3}
       propertyPath: m_RootOrder
@@ -43577,6 +43612,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShadowBox (591)
       objectReference: {fileID: 0}
+    - target: {fileID: 3001564584997393008, guid: 27a8c81525e44f944b21a5df0a5c7968,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5255236568349397952, guid: 27a8c81525e44f944b21a5df0a5c7968,
         type: 3}
       propertyPath: m_RootOrder
@@ -43764,6 +43804,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShadowBox (623)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3001564584997393008, guid: 27a8c81525e44f944b21a5df0a5c7968,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5255236568349397952, guid: 27a8c81525e44f944b21a5df0a5c7968,
         type: 3}
@@ -64372,6 +64417,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShadowBox (622)
       objectReference: {fileID: 0}
+    - target: {fileID: 3001564584997393008, guid: 27a8c81525e44f944b21a5df0a5c7968,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5255236568349397952, guid: 27a8c81525e44f944b21a5df0a5c7968,
         type: 3}
       propertyPath: m_RootOrder
@@ -69066,6 +69116,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShadowBox (592)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3001564584997393008, guid: 27a8c81525e44f944b21a5df0a5c7968,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5255236568349397952, guid: 27a8c81525e44f944b21a5df0a5c7968,
         type: 3}
