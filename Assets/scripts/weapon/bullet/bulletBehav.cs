@@ -35,7 +35,52 @@ public class bulletBehav : MonoBehaviour
             explode();
         }
     }
+    
+    void explode()
+    {
+        if (bulletType.explosion != null)
+        {
+            Instantiate(bulletType.explosion, transform.position, Quaternion.identity);
+        }
+        
+        
+        // //check for enemies
+        Collider[] enemies = Physics.OverlapSphere(transform.position, bulletType.explosionRnge, bulletType.whatIsEnemies);
 
+        // Collider[] player = Physics.OverlapSphere(transform.position, bulletType.explosionRnge, bulletType.whatIsEnemies);
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            //Get component of enemy and call TakeDamage
+        
+            Debug.Log(enemies[i]);
+            if (enemies[i].CompareTag("Enemy"))
+            {
+                Debug.Log("enemied");
+                enemies[i].GetComponent<enemyCollision>().TakeDamage(bulletType.explosionDmg);    
+            }
+            else if (enemies[i].CompareTag("Darkness"))
+            {
+                Debug.Log("fogged");
+                enemies[i].GetComponent<darknessHealth>().TakeDamage(bulletType.explosionDmg);
+            }
+            
+            // player[i].GetComponent<collision>().TakeDamage(bulletType.explosionDmg);
+            //add explosion force to enemy (if enemy has a rigid body)
+            // if(enemies[i].GetComponent<Rigidbody>())
+            // {
+            //     enemies[i].GetComponent<Rigidbody>().AddExplosionForce(bulletType.explosionFce, transform.position, bulletType.explosionRnge);
+            // }
+            
+            // if(enemies[i].GetComponent<Rigidbody>())
+            // {
+            //     enemies[i].GetComponent<Rigidbody>().AddExplosionForce(bulletType.explosionFce, transform.position, bulletType.explosionRnge);
+            // }
+        }
+
+        // //checking to saee if works 
+        // Invoke("Delay", 0.05f);
+        Destroy(gameObject);
+    }
     void OnCollisionEnter(Collision collision) 
     {
         //count up collisions
@@ -47,9 +92,9 @@ public class bulletBehav : MonoBehaviour
             Debug.Log("explode");
             explode();
         }
-        if (collision.collider.CompareTag("Player") && bulletType.explodeOnTouch)
+        if (collision.collider.CompareTag("Ground") && bulletType.explodeOnTouch)
         {
-            Debug.Log("explode");
+            Debug.Log("groynded");
             explode();
         }
     
@@ -72,44 +117,12 @@ public class bulletBehav : MonoBehaviour
     //     Debug.Log(collisions);
     // }
 
-    void explode()
+   
+
+    void Delay()
     {
-        if (bulletType.explosion != null)
-        {
-            Instantiate(bulletType.explosion, transform.position, Quaternion.identity);
-        }
-
-        // //check for enemies
-        // Collider[] enemies = Physics.OverlapSphere(transform.position, bulletType.explosionRnge, bulletType.whatIsEnemies);
-        Collider[] player = Physics.OverlapSphere(transform.position, bulletType.explosionRnge, bulletType.whatIsEnemies);
-        for (int i = 0; i < player.Length; i++)
-        {
-            //Get component of enemy and call TakeDamage
-        
-            
-            // enemies[i].GetComponent<enemyCollision>().TakeDamage(bulletType.explosionDmg);
-            player[i].GetComponent<collision>().TakeDamage(bulletType.explosionDmg);
-            //add explosion force to enemy (if enemy has a rigid body)
-            // if(enemies[i].GetComponent<Rigidbody>())
-            // {
-            //     enemies[i].GetComponent<Rigidbody>().AddExplosionForce(bulletType.explosionFce, transform.position, bulletType.explosionRnge);
-            // }
-            
-            if(player[i].GetComponent<Rigidbody>())
-            {
-                player[i].GetComponent<Rigidbody>().AddExplosionForce(bulletType.explosionFce, transform.position, bulletType.explosionRnge);
-            }
-        }
-
-        // //checking to saee if works 
-        // Invoke("Delay", 0.05f);
         Destroy(gameObject);
     }
-
-    // void Delay()
-    // {
-    //     Destroy(gameObject);
-    // }
 
     void Setup()
     {

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6300042001259729514}
   - component: {fileID: -5843970487707449568}
   - component: {fileID: 789240795047220059}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Ebullet
-  m_TagString: Ebullet
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +110,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
@@ -127,4 +127,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b262b9e1e1e6e0248867c64b3b4b24df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletType: {fileID: 11400000, guid: 15296fb81771af14bb724477d901ab93, type: 2}
+  bulletType: {fileID: 11400000, guid: ddf9b613a6347254491ca876b63bd3e4, type: 2}
