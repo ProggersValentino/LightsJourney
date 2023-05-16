@@ -1,38 +1,8 @@
 fileFormatVersion: 2
-guid: aa07664bee456914898a852ee9cc5933
+guid: 782ffd29226f7c543b5ea1329a065b72
 ModelImporter:
   serializedVersion: 21202
-  internalIDToNameTable:
-  - first:
-      74: 4781951162920444690
-    second: SpookyGhostIdle
-  - first:
-      74: -1422011007694221501
-    second: Armature|ArmatureAction.001
-  - first:
-      74: 6093225430303232669
-    second: Armature|ArmatureAction.002
-  - first:
-      74: 7540612206597172348
-    second: Armature|QuickRigCharacter_Reference|Take 001|BaseLayer
-  - first:
-      74: -6788291789069941537
-    second: Armature|SphereAction
-  - first:
-      74: 1599356377470273256
-    second: Armature|SphereAction.001
-  - first:
-      74: -1883150853644995191
-    second: Armature|SphereAction.002
-  - first:
-      74: 8349842618835845512
-    second: Armature|SpookyGhost.001Action
-  - first:
-      74: -2241230407552446371
-    second: Armature|SpookyGhost.002Action
-  - first:
-      74: -9059471738796837484
-    second: Armature|SpookyGhost.002Action.001
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -61,40 +31,11 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: SpookyGhostIdle
-      takeName: Armature|ArmatureAction
-      internalID: 0
-      firstFrame: 0
-      lastFrame: 200
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 20
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -147,7 +88,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.19999999
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
@@ -156,7 +97,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
