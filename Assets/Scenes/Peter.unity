@@ -2105,6 +2105,37 @@ PrefabInstance:
       propertyPath: keyInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 976765676}
+    - target: {fileID: 5613976854057894025, guid: f49c63901b7897947bd2a574f48ffc07,
+        type: 3}
+      propertyPath: maxEnemies
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613976854057894025, guid: f49c63901b7897947bd2a574f48ffc07,
+        type: 3}
+      propertyPath: maximumRnge
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613976854057894025, guid: f49c63901b7897947bd2a574f48ffc07,
+        type: 3}
+      propertyPath: minimumRnge
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613976854057894025, guid: f49c63901b7897947bd2a574f48ffc07,
+        type: 3}
+      propertyPath: spawnInterval
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613976854057894025, guid: f49c63901b7897947bd2a574f48ffc07,
+        type: 3}
+      propertyPath: enemyPrefab.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613976854057894025, guid: f49c63901b7897947bd2a574f48ffc07,
+        type: 3}
+      propertyPath: enemyPrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 4721208179975993553, guid: 0c2afecb1e9a85141a10887422f8193f,
+        type: 3}
     - target: {fileID: 6458738763122090665, guid: f49c63901b7897947bd2a574f48ffc07,
         type: 3}
       propertyPath: m_Name
@@ -2165,12 +2196,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8246183072915424924, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: primaryGun
-      value: 
-      objectReference: {fileID: 11400000, guid: bf5d0e42e5d3e61448db8b1be81a8ceb,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f49c63901b7897947bd2a574f48ffc07, type: 3}
 --- !u!1001 &7556805085602690784

@@ -5098,6 +5098,7 @@ MonoBehaviour:
   isPlayer: 1
   usingLight: 1
   bulletsLeft: 0
+  bulletsLeft2: 0
   bulletsShot: 0
   fpsCam: {fileID: 5001321192111538454}
   ProjLaunchPoint: {fileID: 5251545011642112679}
@@ -15408,6 +15409,7 @@ Transform:
   - {fileID: 5001321191085186599}
   - {fileID: 1020336895917868058}
   - {fileID: 4952483001781223716}
+  - {fileID: 7910499798672764613}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15593,6 +15595,56 @@ Transform:
   m_Father: {fileID: 6458738763122090671}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7017304274306142135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7910499798672764613}
+  - component: {fileID: 5613976854057894025}
+  m_Layer: 7
+  m_Name: Espawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7910499798672764613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7017304274306142135}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6458738763122090671}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5613976854057894025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7017304274306142135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46f7e774aaf26f42bdfcdb9c59de836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: []
+  spawnInterval: 0.5
+  maxEnemies: 0
+  minimumRnge: 0
+  maximumRnge: 0
+  isSpawning: 1
 --- !u!1 &8828820432711869479
 GameObject:
   m_ObjectHideFlags: 0
