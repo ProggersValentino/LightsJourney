@@ -4841,7 +4841,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2235527923609859840}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000020861623}
-  m_LocalPosition: {x: 0, y: -7, z: -869.38153}
+  m_LocalPosition: {x: -1.2, y: 125.3, z: -467}
   m_LocalScale: {x: 0.17341493, y: 1, z: 0.5970068}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4927,8 +4927,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702c85084ebf99a459567a27bc662cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prompt: 
-  _prompt2: 
+  _prompt: Press 'E'
+  _prompt2: Insert Key 'E'
 --- !u!1 &2293129706925536846
 GameObject:
   m_ObjectHideFlags: 0
@@ -5161,7 +5161,7 @@ BoxCollider:
   m_GameObject: {fileID: 2561056209993560708}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 106.68247, y: 488.55466, z: 116.4711}
   m_Center: {x: 0.6419986, y: 305.8023, z: 5.9488297}
@@ -20501,7 +20501,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7484963647046713112}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000020861623}
-  m_LocalPosition: {x: 160.76093, y: -7, z: -869.00006}
+  m_LocalPosition: {x: 159.2, y: 105, z: -353}
   m_LocalScale: {x: 0.17341493, y: 1, z: 0.5970068}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20587,8 +20587,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702c85084ebf99a459567a27bc662cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prompt: 
-  _prompt2: 
+  _prompt: Press 'E'
+  _prompt2: Insert Key 'E'
 --- !u!1 &7987398362496295005
 GameObject:
   m_ObjectHideFlags: 0
@@ -20898,7 +20898,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8865313559036890532}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000020861623}
-  m_LocalPosition: {x: -160.76093, y: -7, z: -869.00006}
+  m_LocalPosition: {x: -162.4, y: 121.4, z: -344.3}
   m_LocalScale: {x: 0.17341493, y: 1, z: 0.5970068}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20984,8 +20984,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702c85084ebf99a459567a27bc662cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prompt: 
-  _prompt2: 
+  _prompt: Press 'E'
+  _prompt2: Insert Key 'E'
 --- !u!1001 &371674998143625445
 PrefabInstance:
   m_ObjectHideFlags: 0

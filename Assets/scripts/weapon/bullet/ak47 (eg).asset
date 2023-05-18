@@ -20,7 +20,7 @@ MonoBehaviour:
   bounciness: 0
   usesGravity: 1
   directDmg: 20
-  explosionDmg: 20
+  explosionDmg: 100
   explosionRnge: 10
   explosionFce: 0
   maxCollisions: 0

@@ -75,7 +75,7 @@ Transform:
   m_GameObject: {fileID: 3001564584997393008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.000000027939677, y: 1.87, z: 4.63}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2145723321246017377}
@@ -151,7 +151,7 @@ MonoBehaviour:
   currentHealth: 0
   volumetric: {fileID: 7428792466009710260}
   laserCollider: {fileID: 2123077173}
-  regenAfterSec: 20
+  regenAfterSec: 10
   timer: 0
   manageDownSoldiers: {fileID: 0}
 --- !u!65 &2869419113532120166

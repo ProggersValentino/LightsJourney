@@ -221,13 +221,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d5c200c37b8b8439724b6b4300c8f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunType: {fileID: 11400000, guid: 7939e1cddb8e3e647a01ab6533a1c4b3, type: 2}
+  primaryGun: {fileID: 0}
+  secondaryGun: {fileID: 0}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 128
   isPlayer: 0
   usingLight: 0
   bulletsLeft: 0
+  bulletsLeft2: 0
   bulletsShot: 0
   fpsCam: {fileID: 491150097}
   ProjLaunchPoint: {fileID: 1858502063764161331}
@@ -5364,6 +5366,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f00392626f87fbe428ab34a169805d95, type: 2}
+    - target: {fileID: 5866666021909216657, guid: aa07664bee456914898a852ee9cc5933,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 74ae546fdcc03954ba0c59cd2db2acc2, type: 2}
     - target: {fileID: 5866666021909216657, guid: aa07664bee456914898a852ee9cc5933,
         type: 3}
       propertyPath: m_ApplyRootMotion

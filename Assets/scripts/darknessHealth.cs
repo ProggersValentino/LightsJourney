@@ -71,6 +71,11 @@ public class darknessHealth : MonoBehaviour
     //to regenerate fog
     public void OnFogTriggered()
     {
+        //to ensure that the time manager doesnt reactivate all the back within a list based off the first one regening
+        if (manageDownSoldiers.managingTime.Exists(item => item.regening.gameObject == gameObject || item.regening == this))
+        {
+            return;
+        }
         var main = ps.main;
         
         // The cooldown time has elapsed, so trigger the fog and update the last trigger time
