@@ -85,8 +85,6 @@ public class movement : MonoBehaviour
         //checking to see if player is grounded
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHei * 0.5f + 0.2F, whatIsGround);
         
-        
-        Debug.Log(grounded);
         //manipulates drag depending on if grounded or not
         if (grounded)
         {

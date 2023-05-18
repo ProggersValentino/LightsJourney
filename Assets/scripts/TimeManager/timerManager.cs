@@ -7,17 +7,19 @@ public class timerManager : MonoBehaviour
 {
     public List<timeItem> managingTime;
     
+    
     private void Update()
     {
         if (managingTime != null)
         {
             for (int i = managingTime.Count - 1; i >= 0; i--)
             {
+                Debug.Log(Time.time);
                 timeItem regen = managingTime[i]; //accesses the particular element with
                 if (Time.time > regen.timeToTurn)
                 {
-                    regen.regening.TriggerFog();
                     managingTime.Remove(regen);
+                    regen.regening.TriggerFog();
                 }
             }    
         }
@@ -30,7 +32,6 @@ public class timerManager : MonoBehaviour
 public class timeItem
 {
     public darknessHealth regening;
-    
     public float timeToTurn;
     /// <summary>
     /// constructer for adding items to list

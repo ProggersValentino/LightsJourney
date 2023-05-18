@@ -137,7 +137,6 @@ public class gunBehav : MonoBehaviour
     public void fire()
     {
         RTS = false;
-        Debug.Log(RTS);
         //Find the exact hit position using raycast
         Ray ray = fpsCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
         RaycastHit hit;

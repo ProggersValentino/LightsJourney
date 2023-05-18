@@ -62,7 +62,7 @@ public class interact : MonoBehaviour
                     //if the player in looking at an interactable and presses the interactable key then execute loop
                 if (interactable != null)
                 {
-                    // if(!hoverUI.isDisplayed) hoverUI.SetUp(interactable.hasKey);
+                    if(!hoverUI.isDisplayed) hoverUI.SetUp(interactable.hasKey);
                     
                     if (Input.GetKeyDown(interactKey))
                     {
@@ -84,10 +84,10 @@ public class interact : MonoBehaviour
             }
                 
         }
-        // else
-        // {
-        //     hoverUI.close();
-        // }
+        else
+        {
+            hoverUI.close();
+        }
 
         // if (numFound > 0)
         // {

@@ -39,11 +39,16 @@ public class NavMeshAI : MonoBehaviour
     //states
     public float sightRange, attackRange;
     public bool playerISRange, playerIARange;
+    
+    //audio
+    private int audioIndex;
+    
 
     void Awake() 
     {
         player = GameObject.Find("player").transform;
-        agent = GetComponent<NavMeshAgent>();    
+        agent = GetComponent<NavMeshAgent>(); 
+        audioIndex = AudioManager.instance.SFX.FindIndex(sfx => sfx.unit == gameObject);
     }
 
     void Update() 
@@ -108,6 +113,7 @@ public class NavMeshAI : MonoBehaviour
     void ChaseP() 
     {
         agent.SetDestination(player.position);
+        AudioManager.instance.playSFX(audioIndex);
     }
 
     void AttackP() 
