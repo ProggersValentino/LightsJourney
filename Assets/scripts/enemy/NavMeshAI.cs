@@ -48,7 +48,7 @@ public class NavMeshAI : MonoBehaviour
     {
         player = GameObject.Find("player").transform;
         agent = GetComponent<NavMeshAgent>(); 
-        audioIndex = AudioManager.instance.SFX.FindIndex(sfx => sfx.unit == gameObject);
+        audioIndex = AudioManager.instance.SFX.FindIndex(sfx => sfx.unit == gameObject); //finds where its located in the audio manager list
     }
 
     void Update() 
@@ -127,7 +127,7 @@ public class NavMeshAI : MonoBehaviour
         if(!attackDone)
         {
             //spawns bullet
-            // gun.GetComponent<gunBehav>().fire(); //accesses the gun behave data script from enemy gun 
+            gun.GetComponent<EgunBehav>().fire(); //accesses the gun behave data script from enemy gun 
             Debug.Log("attacking p");
             attackDone = true;
             Invoke(nameof(resetAtt), timeBetweenAttacks);

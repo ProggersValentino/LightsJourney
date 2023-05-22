@@ -28,7 +28,6 @@ using UnityEngine;
         AudioClip clipSele = SFX[index].audio[randClip];
         
         SFX[index].unitsSource.PlayOneShot(clipSele);
-
     }
     
     
