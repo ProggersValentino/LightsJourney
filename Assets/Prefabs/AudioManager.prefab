@@ -46,10 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SFX:
-  - unit: {fileID: 0}
+  - AudioType: 
+    unit: {fileID: 0}
     unitsSource: {fileID: 0}
-    audio: []
-  - unit: {fileID: 0}
+    audio:
+    - {fileID: 8300000, guid: 9d1e7d5550dfe604bbcb113513cea12e, type: 3}
+  - AudioType: 
+    unit: {fileID: 0}
     unitsSource: {fileID: 0}
     audio: []
 --- !u!82 &1369770571848342867
@@ -67,7 +70,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

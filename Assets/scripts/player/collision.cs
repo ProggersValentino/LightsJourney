@@ -15,11 +15,15 @@ public class collision : MonoBehaviour
     //collection of keys 
     inventory keyColl;
     
+    //editing movement
+    private movement playerMStat;
+    
 
     private void Awake()
     {
         currentHealth = stats.maxHealth;
         keyColl = GetComponent<inventory>();
+        playerMStat = GetComponent<movement>();
     }
     
     //when in fog
@@ -28,8 +32,13 @@ public class collision : MonoBehaviour
        if (other.CompareTag("Darkness"))
        {
            StartCoroutine(darkOT());
+           // playerMStat.walkSped = 5;
            Debug.Log(currentHealth);
        }
+       // else
+       // {
+       //     playerMStat.walkSped = 7;
+       // }
    }
     
    //when interacting with keys

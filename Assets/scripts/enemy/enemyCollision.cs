@@ -38,7 +38,10 @@ public class enemyCollision : MonoBehaviour
 
     public void die()
     {
-        GetComponent<LootBag>().spawnPU(transform.position);
+        if (gameObject.CompareTag("Enemy"))
+        {
+            GetComponent<LootBag>().spawnPU(transform.position);    
+        }
         Destroy(gameObject);
     }
 }

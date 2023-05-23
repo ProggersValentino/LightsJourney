@@ -17,8 +17,7 @@ public class darknessHealth : MonoBehaviour
 
     public float regenAfterSec;
     public float timer = 0f;
-    private bool fogDied = false;
-    
+
     //event to trigger regen for fog 
     public delegate void FogTriggeredHandler();
     public static event FogTriggeredHandler FogTriggered; // Event for triggering the fog
@@ -58,7 +57,6 @@ public class darknessHealth : MonoBehaviour
     public void die()
     {
         // Debug.Log("die calling me");
-        fogDied = true;
         //when the player kills the fog then these actions will happen
         var main = ps.main; //accessing the particle system 
         shadowBox.enabled = false;

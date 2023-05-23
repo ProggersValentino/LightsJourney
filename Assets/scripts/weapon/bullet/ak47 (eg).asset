@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: ak47 (eg)
   m_EditorClassIdentifier: 
   rb: {fileID: -5843970487707449568, guid: f95d25097a8e4c243babf1a5b729e6ee, type: 3}
-  explosion: {fileID: 0}
+  explosion: {fileID: 3274827132212194312, guid: 523bd7b0d45e42a479c7ecdc9a8b7419,
+    type: 3}
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 72

@@ -13,6 +13,7 @@ TagManager:
   - k3
   - key
   - Ground
+  - spawner
   layers:
   - Default
   - TransparentFX
