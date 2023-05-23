@@ -37417,7 +37417,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 184114394, guid: f49c63901b7897947bd2a574f48ffc07, type: 3}
       propertyPath: keys
-      value: 0
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1211096436520587985, guid: f49c63901b7897947bd2a574f48ffc07,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
         type: 3}
@@ -37503,6 +37508,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749409486252974423, guid: f49c63901b7897947bd2a574f48ffc07,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f49c63901b7897947bd2a574f48ffc07, type: 3}

@@ -223,6 +223,10 @@ public class gunBehav : MonoBehaviour
                 rayHit.collider.GetComponent<darknessHealth>().TakeDamage(primaryGun.dmg);
                 Debug.Log(rayHit.collider.GetComponent<darknessHealth>().currentHealth);
             }
+            else if (rayHit.collider.CompareTag("spawner"))
+            {
+                rayHit.collider.GetComponent<enemyCollision>().TakeDamage(primaryGun.dmg);
+            }
 
             // draw the laser line between the camera and the hit point
             // laserLine.SetPosition(0, ProjLaunchPoint.position);
