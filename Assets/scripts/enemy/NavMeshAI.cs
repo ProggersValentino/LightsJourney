@@ -50,8 +50,9 @@ public class NavMeshAI : MonoBehaviour
     {
         player = GameObject.Find("player").transform;
         agent = GetComponent<NavMeshAgent>(); 
+        audManager = FindObjectOfType<AudioManager>();
         audioIndex = audManager.SFX.FindIndex(sfx => sfx.unit == gameObject); //finds where its located in the audio manager list
-
+        Debug.Log(audioIndex);
         if (audManager == null || audioIndex == -1 || audioIndex >= audManager.SFX.Count || audManager.SFX[audioIndex].unit != gameObject)
         {
             audIsManaged();
