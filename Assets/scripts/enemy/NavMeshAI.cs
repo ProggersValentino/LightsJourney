@@ -21,6 +21,8 @@ public class NavMeshAI : MonoBehaviour
     public NavMeshAgent agent;
     private Transform player;
     public LayerMask whatIsPlayer, whatIsGround;
+
+    public AudioManager audManager;
     
     //looking towards player
     public float rotSpeed;
@@ -48,11 +50,28 @@ public class NavMeshAI : MonoBehaviour
     {
         player = GameObject.Find("player").transform;
         agent = GetComponent<NavMeshAgent>(); 
-        audioIndex = AudioManager.instance.SFX.FindIndex(sfx => sfx.unit == gameObject); //finds where its located in the audio manager list
+        audioIndex = audManager.SFX.FindIndex(sfx => sfx.unit == gameObject); //finds where its located in the audio manager list
+
+        if (audManager == null || audioIndex == -1 || audioIndex >= audManager.SFX.Count || audManager.SFX[audioIndex].unit != gameObject)
+        {
+            audIsManaged();
+        }
+        else
+        {
+            Debug.Log(audioIndex);
+        }
     }
 
     void Update() 
     {
+        //checkes to see if index is non existent within the audio manager
+        switch(audioIndex)
+        {
+            case -1:
+                audIsManaged();
+                break;
+        }
+        
         //setting the ranges for the sight range and attack range of the AI 
         playerISRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerIARange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
@@ -74,6 +93,23 @@ public class NavMeshAI : MonoBehaviour
             AttackP();
         }
     }
+    
+    //adds enemies to audio manager if not in list
+    public void audIsManaged()
+    {
+        // audioIndex = audManager.SFX.FindIndex(sfx => sfx.unit == gameObject); //finds where its located in the audio manager list
+        if (audioIndex < 0 || audioIndex >= audManager.SFX.Count || audManager.SFX[audioIndex].unit != gameObject)
+        {
+            audManager.SFX.Add(new AudioUnits(gameObject, GetComponent<AudioSource>()));
+            audioIndex = audManager.SFX.FindIndex(sfx => sfx.unit == gameObject); //finds where its located in the audio manager list
+            Debug.Log(audioIndex);
+            
+            audManager.LoadAudioClipsFromFolder("Ghosts", audioIndex);
+            audioIndex = audManager.SFX.Count - 1;
+        }
+        
+    }
+    
     
     void Patroling() 
     {
@@ -113,7 +149,7 @@ public class NavMeshAI : MonoBehaviour
     void ChaseP() 
     {
         agent.SetDestination(player.position);
-        AudioManager.instance.soundChecker(audioIndex);
+        audManager.playSFX(audioIndex);
     }
 
     void AttackP() 

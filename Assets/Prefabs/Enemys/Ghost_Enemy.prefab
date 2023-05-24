@@ -118,17 +118,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8740009709533905664}
-  - component: {fileID: 3641059675216333296}
   - component: {fileID: 7828786597468209849}
-  - component: {fileID: 812136894718216674}
-  - component: {fileID: 627847463}
+  - component: {fileID: 1852228976}
   m_Layer: 6
   m_Name: gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8740009709533905664
 Transform:
   m_ObjectHideFlags: 0
@@ -137,7 +135,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4591263576231663890}
   m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0.57, y: 0, z: 0.27}
+  m_LocalPosition: {x: 0.57, y: 0, z: -0.92}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -145,14 +143,6 @@ Transform:
   m_Father: {fileID: 4721208179975993564}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
---- !u!33 &3641059675216333296
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4591263576231663890}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &7828786597468209849
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -195,21 +185,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &812136894718216674
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4591263576231663890}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &627847463
+--- !u!114 &1852228976
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,25 +194,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 4591263576231663890}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5d5c200c37b8b8439724b6b4300c8f7, type: 3}
+  m_Script: {fileID: 11500000, guid: add7830785ed23549a835ac645914aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryGun: {fileID: 0}
-  secondaryGun: {fileID: 0}
+  Gun: {fileID: 11400000, guid: 7939e1cddb8e3e647a01ab6533a1c4b3, type: 2}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 128
   isPlayer: 0
   usingLight: 0
   bulletsLeft: 0
-  bulletsLeft2: 0
   bulletsShot: 0
   fpsCam: {fileID: 491150097}
   ProjLaunchPoint: {fileID: 1858502063764161331}
   playerRb: {fileID: 4721208179975993552}
-  allowInvoke: 0
-  lightBeam: {fileID: 0}
-  mainBeam: {fileID: 0}
+  allowInvoke: 1
   lightRegen: 0
 --- !u!1 &4721208179975993553
 GameObject:
@@ -262,7 +234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4721208179975993564
 Transform:
   m_ObjectHideFlags: 0
@@ -272,7 +244,7 @@ Transform:
   m_GameObject: {fileID: 4721208179975993553}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.07, y: 1.43, z: 5.11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.42548, y: 0.42548, z: 0.42548}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8740009709533905664}
@@ -342,7 +314,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.64
-  m_Height: 1.52
+  m_Height: 5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4721208179975993552
@@ -393,8 +365,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
+  m_Height: 5
+  m_BaseOffset: 3
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &4721208179975993566
@@ -422,7 +394,7 @@ MonoBehaviour:
     m_Bits: 8
   rotSpeed: 20
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 1
+  walkPointRange: 10
   timeBetweenAttacks: 3
   sightRange: 20
   attackRange: 0
@@ -463,8 +435,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 1.6470861
+  MaxDistance: 30
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -563,7 +535,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5648149675861437851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 3.07, z: 0}
+  m_LocalPosition: {x: -0, y: 3.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
