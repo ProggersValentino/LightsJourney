@@ -113,7 +113,7 @@ public class NavMeshAI : MonoBehaviour
     void ChaseP() 
     {
         agent.SetDestination(player.position);
-        AudioManager.instance.playSFX(audioIndex);
+        AudioManager.instance.soundChecker(audioIndex);
     }
 
     void AttackP() 
