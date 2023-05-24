@@ -70,7 +70,7 @@ using System.Collections.Generic;
 
             string audioPath = GetAudioResourcePath(audioFilePath); // Get the audio resource path
             
-            AudioClip audioClip = Resources.Load<AudioClip>(audioPath);
+            AudioClip audioClip = Resources.Load<AudioClip>(audioPath); //extracts the data out of the desird file path 
             
             Debug.Log(audioPath);
             
@@ -84,7 +84,7 @@ using System.Collections.Generic;
                         SFX[index].audio = new AudioClip[0];
                     }
                     
-                    SFX[index].audio = SFX[index].audio.Append(audioClip).ToArray();
+                    SFX[index].audio = SFX[index].audio.Append(audioClip).ToArray(); //adds clip to aduio list 
                     SFX[index].AudioPath = audioPath;
                 }
                 else
@@ -98,7 +98,9 @@ using System.Collections.Generic;
             }
         }
     }
-
+    
+    
+    //gets desired file path 
     private string GetAudioResourcePath(string audioFilePath)
     {
         int startIndex = audioFilePath.IndexOf("Assets/Resources") + 17; // Update the start index
