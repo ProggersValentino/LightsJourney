@@ -15,7 +15,7 @@ public class EgunBehav : MonoBehaviour
     public LayerMask whatIsEnemy;
     
     //bools
-    private bool shooting, shootingSecond, RTS, reloading; //RTS = ready to shoot
+    private bool shooting, shootingSecond, reloading; //RTS = ready to shoot
     public bool isPlayer;
     public bool usingLight;
 
@@ -39,13 +39,11 @@ public class EgunBehav : MonoBehaviour
     {
         //ensuring mags are full
         bulletsLeft = Gun.magSize;
-        RTS = true;
     }
 
     //shooting done through projectiles
     public void fire()
     {
-        RTS = false;
         //Find the exact hit position using raycast
         Ray ray = fpsCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
         RaycastHit hit;
@@ -84,12 +82,6 @@ public class EgunBehav : MonoBehaviour
     }
     
    
-    void ResetShot()
-    {
-        //Allow shooting and invoking again 
-        RTS = true;
-        allowInvoke = true;
-    }
     
     
     

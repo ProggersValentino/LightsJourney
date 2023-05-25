@@ -256,6 +256,7 @@ GameObject:
   - component: {fileID: 4721208179975993566}
   - component: {fileID: 2534274888250105323}
   - component: {fileID: 5984839712498792643}
+  - component: {fileID: 38221011}
   m_Layer: 6
   m_Name: SpookyGhost
   m_TagString: Enemy
@@ -375,6 +376,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: c9de502ae490cab4b8eea0393976acc4, type: 2}
   damage: 100
+  deathEffect: {fileID: 2018559776533650180, guid: cc213bab58d4f984fbff73f80b53b31b,
+    type: 3}
 --- !u!195 &4721208179975993561
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -420,14 +423,16 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
+  audManager: {fileID: 0}
   rotSpeed: 20
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 1
+  walkPointRange: 10
   timeBetweenAttacks: 3
   sightRange: 20
   attackRange: 0
   playerISRange: 0
   playerIARange: 0
+  audioIndex: 0
 --- !u!114 &2534274888250105323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -539,6 +544,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &38221011
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721208179975993553}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: -1000
+  m_DecayTime: 2.81
+  m_DecayHFRatio: 0.14
+  m_ReflectionsLevel: 429
+  m_ReverbLevel: 1023
+  m_ReverbDelay: 0.021
+  m_Diffusion: 80
+  m_Density: 60
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 22
 --- !u!1 &5648149675861437851
 GameObject:
   m_ObjectHideFlags: 0

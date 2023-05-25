@@ -4291,6 +4291,7 @@ MonoBehaviour:
   attackRange: 0
   playerISRange: 0
   playerIARange: 0
+  audioIndex: 0
 --- !u!195 &123445464
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9913,6 +9914,7 @@ MonoBehaviour:
   attackRange: 0
   playerISRange: 0
   playerIARange: 0
+  audioIndex: 0
 --- !u!195 &252280868
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11009,6 +11011,7 @@ MonoBehaviour:
   attackRange: 0
   playerISRange: 0
   playerIARange: 0
+  audioIndex: 0
 --- !u!195 &266607931
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -14421,6 +14424,7 @@ MonoBehaviour:
   attackRange: 0
   playerISRange: 0
   playerIARange: 0
+  audioIndex: 0
 --- !u!195 &333767979
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -24981,6 +24985,7 @@ MonoBehaviour:
   attackRange: 0
   playerISRange: 0
   playerIARange: 0
+  audioIndex: 0
 --- !u!195 &576841503
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -37327,6 +37332,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27a8c81525e44f944b21a5df0a5c7968, type: 3}
+--- !u!114 &896711493 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 341848364260245428, guid: 6304e8cf153615f47a79a8d9f3c01ce7,
+    type: 3}
+  m_PrefabInstance: {fileID: 106367928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7aee12a0eb5d24eafac1d16163236e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &897844257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41187,6 +41204,7 @@ MonoBehaviour:
   attackRange: 0
   playerISRange: 0
   playerIARange: 0
+  audioIndex: 0
 --- !u!195 &986031579
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -49083,6 +49101,7 @@ MonoBehaviour:
   attackRange: 0
   playerISRange: 0
   playerIARange: 0
+  audioIndex: 0
 --- !u!195 &1220056118
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -59350,6 +59369,7 @@ MonoBehaviour:
   attackRange: 0
   playerISRange: 0
   playerIARange: 0
+  audioIndex: 0
 --- !u!195 &1485235283
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -60610,6 +60630,7 @@ MonoBehaviour:
   attackRange: 0
   playerISRange: 0
   playerIARange: 0
+  audioIndex: 0
 --- !u!195 &1507493612
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -62194,14 +62215,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
         type: 3}
-      propertyPath: keyFinder.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: keyFinder.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: hoverUI
+      value: 
+      objectReference: {fileID: 896711493}
     - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
         type: 3}
       propertyPath: keyFinder.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -62209,29 +62225,9 @@ PrefabInstance:
       objectReference: {fileID: 1917363903}
     - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
         type: 3}
-      propertyPath: keyFinder.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: keyFinder.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: findKeys
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
       propertyPath: keyInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1917363903}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: keyInteractEvents.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: unlockingDoor
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
-        type: 3}
-      propertyPath: keyFinder.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: GatewaySys, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 6458738763122090665, guid: f49c63901b7897947bd2a574f48ffc07,
         type: 3}
       propertyPath: m_Name
@@ -64142,6 +64138,7 @@ MonoBehaviour:
   attackRange: 0
   playerISRange: 0
   playerIARange: 0
+  audioIndex: 0
 --- !u!195 &1608076248
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -67145,6 +67142,7 @@ MonoBehaviour:
   attackRange: 0
   playerISRange: 0
   playerIARange: 0
+  audioIndex: 0
 --- !u!195 &1683107307
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -78901,6 +78899,7 @@ MonoBehaviour:
   attackRange: 0
   playerISRange: 0
   playerIARange: 0
+  audioIndex: 0
 --- !u!195 &2002457787
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -80266,6 +80265,7 @@ MonoBehaviour:
   attackRange: 0
   playerISRange: 0
   playerIARange: 0
+  audioIndex: 0
 --- !u!195 &2039544331
 NavMeshAgent:
   m_ObjectHideFlags: 0

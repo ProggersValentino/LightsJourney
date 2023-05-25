@@ -9,9 +9,32 @@ public class enemyCollision : MonoBehaviour
     public float damage;
     private float currentHealth;
 
+    //audio related
+    private NavMeshAI AITings;
+    private int audioIndex = -1;
+    private AudioManager audManger;
+
+    public GameObject deathEffect;
+
+    private void Awake()
+    {
+        audManger = FindObjectOfType<AudioManager>();
+    }
+
     private void Start()
     {
         currentHealth = stats.maxHealth;
+        AITings = FindObjectOfType<NavMeshAI>();
+        Debug.Log("audioIndex");
+    }
+
+    private void Update()
+    {
+        if (audioIndex == -1)
+        {
+            audioIndex = AITings.audioIndex;
+            // Debug.Log(audioIndex);
+        }
     }
 
     private void OnCollisionEnter(Collision other)
@@ -40,7 +63,8 @@ public class enemyCollision : MonoBehaviour
     {
         if (gameObject.CompareTag("Enemy"))
         {
-            GetComponent<LootBag>().spawnPU(transform.position);    
+            GetComponent<LootBag>().spawnPU(transform.position);
+            Instantiate(deathEffect, transform.position, Quaternion.identity); //instantiates particle effect as well as sound
         }
         Destroy(gameObject);
     }

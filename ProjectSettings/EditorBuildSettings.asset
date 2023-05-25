@@ -6,11 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Miguel.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Scenes/Miguel/UI/WinScreen.unity
-    guid: f1ba27743ab89144f929daa9e2e8f049
+    path: Assets/Scenes/Menu.unity
+    guid: c9d0f9e6f74b85d44a6353df38c0d89c
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: f6c9ecc23192d3b4c853df30cc0cb2fd
@@ -20,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: f64acc1208d73a5499444afe5f399549
+  - enabled: 1
+    path: Assets/Scenes/Miguel/UI/WinScreen.unity
+    guid: f1ba27743ab89144f929daa9e2e8f049
   m_configObjects: {}

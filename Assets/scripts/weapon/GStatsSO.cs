@@ -29,36 +29,36 @@ public class GStatsSO : ScriptableObject
     public float recoilForce;
     
     
-    
-#if UNITY_EDITOR
-    [HideInInspector] public bool showBulletVariables = true;
-    [HideInInspector] public bool showRaycastVariables = true;
-#endif
-
-    void OnValidate()
-    {
-        if (projectileBased)
-        {
-            // Disable raycast variables
-            showRaycastVariables = false;
-
-#if UNITY_EDITOR
-            // Hide raycast variables in the editor
-            UnityEditor.EditorGUIUtility.fieldWidth = 20;
-            UnityEditor.EditorGUIUtility.labelWidth = 160;
-#endif
-        }
-        else if (rayBased)
-        {
-            // Disable bullet variables
-            showBulletVariables = false;
-
-#if UNITY_EDITOR
-            // Hide bullet variables in the editor
-            UnityEditor.EditorGUIUtility.fieldWidth = 20;
-            UnityEditor.EditorGUIUtility.labelWidth = 160;
-#endif
-        }
-    }
+//     
+// #if UNITY_EDITOR
+//     [HideInInspector] public bool showBulletVariables = true;
+//     [HideInInspector] public bool showRaycastVariables = true;
+// #endif
+//
+//     void OnValidate()
+//     {
+//         if (projectileBased)
+//         {
+//             // Disable raycast variables
+//             showRaycastVariables = false;
+//
+// #if UNITY_EDITOR
+//             // Hide raycast variables in the editor
+//             UnityEditor.EditorGUIUtility.fieldWidth = 20;
+//             UnityEditor.EditorGUIUtility.labelWidth = 160;
+// #endif
+//         }
+//         else if (rayBased)
+//         {
+//             // Disable bullet variables
+//             showBulletVariables = false;
+//
+// #if UNITY_EDITOR
+//             // Hide bullet variables in the editor
+//             UnityEditor.EditorGUIUtility.fieldWidth = 20;
+//             UnityEditor.EditorGUIUtility.labelWidth = 160;
+// #endif
+//         }
+//     }
 }
-
+//

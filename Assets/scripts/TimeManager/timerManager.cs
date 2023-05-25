@@ -14,7 +14,7 @@ public class timerManager : MonoBehaviour
         {
             for (int i = managingTime.Count - 1; i >= 0; i--)
             {
-                Debug.Log(Time.time);
+                // Debug.Log(Time.time);
                 timeItem regen = managingTime[i]; //accesses the particular element with
                 if (Time.time > regen.timeToTurn)
                 {

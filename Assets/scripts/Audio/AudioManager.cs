@@ -5,7 +5,6 @@ using System.Collections.Generic;
  using System.Linq;
  using JetBrains.Annotations;
  using Microsoft.Win32.SafeHandles;
- using UnityEditor.ShaderGraph.Drawing;
  using UnityEngine;
  using Random = UnityEngine.Random;
 
@@ -32,7 +31,7 @@ using System.Collections.Generic;
     //     // }
     // }
 
-    public void playSFX(int index)
+    public void playSFX(int index, string audioType, bool ovRide)
     {
         float audDel;
 
@@ -40,22 +39,22 @@ using System.Collections.Generic;
         
         // Debug.Log(Time.time);
         
-        if (Time.time > audDel)
+        if (Time.time > audDel || ovRide)
         {
-            int randClip = Random.Range(0, SFX[index].audio.Length);
-            AudioClip clipSele = SFX[index].audio[randClip];
+            var filteredClips = SFX[index].audio.Where(clip => clip.name.Contains(audioType)).ToList();
+
+            
+            int randClip = Random.Range(0, filteredClips.Count);
+            AudioClip clipSele = filteredClips[randClip];
 
             SFX[index].unitsSource.PlayOneShot(clipSele);
             isPlaying = true;
+            Debug.Log(clipSele);
 
             SFX[index].audioLength = clipSele.length + Time.time;
         }
         
         
-        // if (Time.time > clipSele.length + Time.time)
-        // {
-        //     isPlaying = false;
-        // }
     }
     
     //extracts desired audio 

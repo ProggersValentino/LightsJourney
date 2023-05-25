@@ -21,7 +21,7 @@ MonoBehaviour:
   usesGravity: 0
   directDmg: 0
   explosionDmg: 20
-  explosionRnge: 10
+  explosionRnge: 5
   explosionFce: 0
   maxCollisions: 0
   maxLifetime: 2

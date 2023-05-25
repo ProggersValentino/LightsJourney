@@ -43,7 +43,7 @@ public class NavMeshAI : MonoBehaviour
     public bool playerISRange, playerIARange;
     
     //audio
-    private int audioIndex;
+    public int audioIndex;
     
 
     void Awake() 
@@ -52,7 +52,7 @@ public class NavMeshAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>(); 
         audManager = FindObjectOfType<AudioManager>();
         audioIndex = audManager.SFX.FindIndex(sfx => sfx.unit == gameObject); //finds where its located in the audio manager list
-        Debug.Log(audioIndex);
+        // Debug.Log(audioIndex);
         
         //detecting if audioIndex will spit out an error 
         if (audManager == null || audioIndex == -1 || audioIndex >= audManager.SFX.Count || audManager.SFX[audioIndex].unit != gameObject)
@@ -61,7 +61,7 @@ public class NavMeshAI : MonoBehaviour
         }
         else
         {
-            Debug.Log(audioIndex);
+            // Debug.Log(audioIndex);
         }
     }
 
@@ -105,9 +105,9 @@ public class NavMeshAI : MonoBehaviour
         {
             audManager.SFX.Add(new AudioUnits(gameObject, GetComponent<AudioSource>())); //adds the objects to the list
             audioIndex = audManager.SFX.FindIndex(sfx => sfx.unit == gameObject); //finds where its located in the audio manager list
-            Debug.Log(audioIndex);
+            // Debug.Log(audioIndex);
             
-            audManager.LoadAudioClipsFromFolder("Ghosts", audioIndex);
+            audManager.LoadAudioClipsFromFolder("Ghosts", audioIndex); //inputs the sounds within the list
             audioIndex = audManager.SFX.Count - 1;
         }
         
@@ -130,6 +130,7 @@ public class NavMeshAI : MonoBehaviour
         //walkpoint reached
         if(distToWalkPoint.magnitude < 1f)
         {
+            audManager.playSFX(audioIndex, "Idle", false);
             WPSet = false; //resetting the walkpoint calculation to generate another coord for the AI to lock onto
         }
     }
@@ -152,7 +153,7 @@ public class NavMeshAI : MonoBehaviour
     void ChaseP() 
     {
         agent.SetDestination(player.position);
-        audManager.playSFX(audioIndex);
+        audManager.playSFX(audioIndex, "Scream", false);
     }
 
     void AttackP() 
@@ -167,7 +168,7 @@ public class NavMeshAI : MonoBehaviour
         {
             //spawns bullet
             gun.GetComponent<EgunBehav>().fire(); //accesses the gun behave data script from enemy gun 
-            Debug.Log("attacking p");
+            // Debug.Log("attacking p");
             attackDone = true;
             Invoke(nameof(resetAtt), timeBetweenAttacks);
         }
