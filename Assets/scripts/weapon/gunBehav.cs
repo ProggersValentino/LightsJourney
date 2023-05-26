@@ -100,6 +100,7 @@ public class gunBehav : MonoBehaviour
                 //laser beam
                 lightBeam.Play(); //enables laser when player is firing
                 mainBeam.Play();
+                StopAllCoroutines();
                 
                 //raycast gun
                 fireNonProj();
@@ -108,11 +109,12 @@ public class gunBehav : MonoBehaviour
         }
         else
         {
+            StartCoroutine(regenLight());
             mainBeam.Stop();
             lightBeam.Stop(); //disables laser when player stops pressing fire button
         }
 
-        if (RTS && shootingSecond && !reloading && bulletsLeft > 0)
+        if (RTS && shootingSecond && !reloading && bulletsLeft2 > 0)
         {
             bulletsShot = secondaryGun.bulletsPerTap;
             
@@ -122,15 +124,15 @@ public class gunBehav : MonoBehaviour
             }
         }
 
-        if (!Input.GetKey(KeyCode.Mouse0) && bulletsLeft < primaryGun.magSize)
-        {
-            StartCoroutine(regenLight());
-            // Debug.Log(bulletsLeft);
-        }
-        else
-        {
-            StopCoroutine(regenLight());
-        }
+        // if (!Input.GetKey(KeyCode.Mouse0) && bulletsLeft < primaryGun.magSize)
+        // {
+        //     StartCoroutine(regenLight());
+        //     // Debug.Log(bulletsLeft);
+        // }
+        // else
+        // {
+        //     StopAllCoroutines();
+        // }
     }
     
     //shooting done through projectiles
