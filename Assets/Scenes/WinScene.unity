@@ -666,8 +666,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f7595ec3d81c9044bae59fadc340ec3a, type: 2}
-  m_sharedMaterial: {fileID: 1848686193786605119, guid: f7595ec3d81c9044bae59fadc340ec3a,
+  m_fontAsset: {fileID: 11400000, guid: b7cd7b0b8c960bb4386b77f6afa72d98, type: 2}
+  m_sharedMaterial: {fileID: 7632071876515519602, guid: b7cd7b0b8c960bb4386b77f6afa72d98,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1208,8 +1208,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Play Again
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f7595ec3d81c9044bae59fadc340ec3a, type: 2}
-  m_sharedMaterial: {fileID: 1848686193786605119, guid: f7595ec3d81c9044bae59fadc340ec3a,
+  m_fontAsset: {fileID: 11400000, guid: b7cd7b0b8c960bb4386b77f6afa72d98, type: 2}
+  m_sharedMaterial: {fileID: 7632071876515519602, guid: b7cd7b0b8c960bb4386b77f6afa72d98,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2194,7 +2194,7 @@ GameObject:
   - component: {fileID: 800986352}
   - component: {fileID: 800986351}
   m_Layer: 5
-  m_Name: Credits
+  m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2759,7 +2759,7 @@ GameObject:
   - component: {fileID: 955669296}
   - component: {fileID: 955669295}
   m_Layer: 5
-  m_Name: Play
+  m_Name: Play Agin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3329,7 +3329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100, y: 175}
+  m_AnchoredPosition: {x: -167, y: 173}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1192974586
@@ -3352,10 +3352,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You Win
+  m_text: You        Win
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 39d9994d6d9019a4192a515ae9765a3f, type: 2}
-  m_sharedMaterial: {fileID: -6963402881636594325, guid: 39d9994d6d9019a4192a515ae9765a3f,
+  m_fontAsset: {fileID: 11400000, guid: d41259774f185954a9c06441e2f4cf19, type: 2}
+  m_sharedMaterial: {fileID: 8843598848703776106, guid: d41259774f185954a9c06441e2f4cf19,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3363,7 +3363,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278253311
-  m_fontColor: {r: 1, g: 0.9654912, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 0.96470594, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
