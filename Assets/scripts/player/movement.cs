@@ -148,6 +148,7 @@ public class movement : MonoBehaviour
         {
             currentState = moveState.sprinting;
             moveSped = sprintSped;
+            StopAllCoroutines();
             stamina -= 0.5f;
         }
         

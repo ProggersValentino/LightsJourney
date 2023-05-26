@@ -12,6 +12,13 @@ public class collision : MonoBehaviour
     public float currentHealth;
     public float dmgTick;
     
+    //regen related
+    public float healthRegenTick;
+    public float elapsedTime;
+    public float delayPeriod;
+
+
+
     //collection of keys 
     inventory keyColl;
     
@@ -25,7 +32,12 @@ public class collision : MonoBehaviour
         keyColl = GetComponent<inventory>();
         playerMStat = GetComponent<movement>();
     }
-    
+
+    private void Update()
+    {
+        passiveRegen();
+    }
+
     //when in fog
    private void OnTriggerStay(Collider other)
    {
@@ -77,7 +89,10 @@ public class collision : MonoBehaviour
    public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-
+        
+        //resetting elapse time
+        elapsedTime = 0f;
+        
         if (currentHealth <= 0)
         {
             currentHealth = 0;
@@ -85,6 +100,25 @@ public class collision : MonoBehaviour
             die();
         }
     }
+
+   public void passiveRegen()
+   {
+       elapsedTime += Time.deltaTime;
+
+       if (elapsedTime >= delayPeriod)
+       {
+           // Compare the current value with the initial value
+           if (currentHealth < 100)
+           {
+               currentHealth += healthRegenTick;
+           }
+           else
+           {
+               elapsedTime = 0f;
+           }
+           // healthAtPoint = currentHealth; // Update the initial value for the next detection
+       }
+   }
 
     public void die()
     {
@@ -95,7 +129,5 @@ public class collision : MonoBehaviour
     {
         yield return new WaitForSeconds(dmgTick);
         TakeDamage(darkDmg);
-
-        
     }
 }
