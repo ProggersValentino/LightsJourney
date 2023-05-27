@@ -376,6 +376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: c9de502ae490cab4b8eea0393976acc4, type: 2}
   damage: 100
+  AITings: {fileID: 4721208179975993566}
   deathEffect: {fileID: 2018559776533650180, guid: cc213bab58d4f984fbff73f80b53b31b,
     type: 3}
 --- !u!195 &4721208179975993561
@@ -446,7 +447,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PUGen: {fileID: 2005718570277215351, guid: b87aa5510bae38e4aadfb64907068142, type: 3}
-  lootList: []
+  lootList:
+  - {fileID: 11400000, guid: 8fe8f90efbc4e0e428d0f8169917a585, type: 2}
 --- !u!82 &5984839712498792643
 AudioSource:
   m_ObjectHideFlags: 0

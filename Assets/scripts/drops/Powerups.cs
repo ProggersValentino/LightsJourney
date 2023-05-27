@@ -12,19 +12,28 @@ public class Powerups : MonoBehaviour
         
         if(collision.CompareTag("Player"))
         {
+            temporaryBuff buff = Instantiate(PUEffect) as temporaryBuff; //allow access to the stateselection otherwise it wont work 
+            
             Debug.Log("im detected");
-            // if(temporaryBuff.stateSelection == temporaryBuff.buffState.temporary) StartCoroutine(PUActivation(collision)); //activating coroutine
-            // if(temporaryBuff.stateSelection == temporaryBuff.buffState.permanent) 
-            // itemAdd(collision); //permanently add the item
-            StartCoroutine(PUActivation(collision));
+            if(buff.stateSelection == temporaryBuff.buffState.temporary) StartCoroutine(PUActivation(buff,collision)); //activating coroutine
+            if(buff.stateSelection == temporaryBuff.buffState.permanent)
+            {
+                Debug.Log("perma doje");
+                itemAdd(buff, collision); //permanently add the item
+            }
+            
+                
+
+            Debug.Log(buff.stateSelection);    
+            // StartCoroutine(PUActivation(collision));
         }
         
-        Debug.Log(temporaryBuff.stateSelection);
+        
         
     }
 
     // temporary buff activation through a coroutine
-    public IEnumerator PUActivation(Collider collision)
+    public IEnumerator PUActivation(temporaryBuff buff, Collider collision)
     {
         PUEffect.Apply(collision.gameObject); //changed value
         
@@ -39,7 +48,7 @@ public class Powerups : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void itemAdd(Collider collision)
+    public void itemAdd(temporaryBuff buff, Collider collision)
     {
         PUEffect.Apply(collision.gameObject);
         Destroy(gameObject);

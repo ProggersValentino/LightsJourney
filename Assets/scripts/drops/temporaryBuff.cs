@@ -19,8 +19,8 @@ public class temporaryBuff : PowerUpSO
 
     //if its perma or temporary
     public enum buffState {temporary, permanent}
-    public static buffState stateSelection;
-    public buffState stating = stateSelection;
+    public buffState stateSelection;
+    // public buffState stating = stateSelection;
     
     
     [Header("variation amounts")]
@@ -39,7 +39,7 @@ public class temporaryBuff : PowerUpSO
     {
         if (buffSelection == buffType.ammunition)
         {
-            target.GetComponentInChildren<gunBehav>().bulletsLeft += amount;
+            target.GetComponentInChildren<gunBehav>().bulletsLeft2 += amount;
         }
         else if (buffSelection == buffType.health)
         {

@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 4343
+  controlID: 4631
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,9 +251,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -146.62941, y: -181.77522, z: 469.86145}
+    m_Target: {x: 455.23972, y: 59.11924, z: -155.13225}
     speed: 2
-    m_Value: {x: -146.62941, y: -181.77522, z: 469.86145}
+    m_Value: {x: 456.17365, y: 59.25587, z: -156.41135}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -300,9 +300,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.1773268, y: -0.13583076, z: 0.02332583, w: 0.97508216}
+    m_Target: {x: 0.032597143, y: -0.804982, z: -0.04305929, w: -0.5918831}
     speed: 2
-    m_Value: {x: -0.1773268, y: 0.13583076, z: -0.02332583, w: -0.9750822}
+    m_Value: {x: 0.035373997, y: -0.80250436, z: -0.046549615, w: -0.59377486}
   m_Size:
     m_Target: 279.65594
     speed: 2
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 4344
+  controlID: 4632
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 4345
+  controlID: 4633
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -440,9 +440,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8e810000
+      m_SelectedIDs: 94800000
       m_LastClickedID: 0
-      m_ExpandedIDs: fad9ffffacebffffccf5ffffd8f5ffffeef5ffff00f6ffff1afbffff
+      m_ExpandedIDs: 8e8bfefffad9ffffd2eaffffacebffffccf5ffffd8f5ffffeef5ffff00f6ffff1afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -494,7 +494,7 @@ MonoBehaviour:
   - {fileID: 9}
   - {fileID: 10}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 3
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -3051,7 +3051,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -3109,7 +3109,7 @@ MonoBehaviour:
   - {fileID: 15}
   - {fileID: 16}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -3152,22 +3152,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/UI/Buttons
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 61
   m_LastFolders:
-  - Assets/UI/Buttons
+  - Assets/Scenes
   m_LastFoldersGridSize: 61
   m_LastProjectPath: C:\Uni\Semester 1 2023\IGB100\Assessment\Assessment 2\LightsJourney\LightsJourney
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 377.40002}
-    m_SelectedIDs: 5c730000
-    m_LastClickedID: 29532
-    m_ExpandedIDs: 00000000f46e0000f66e0000f86e0000fa6e0000fc6e000034730000ffffff7f
+    scrollPos: {x: 0, y: 295}
+    m_SelectedIDs: 14730000
+    m_LastClickedID: 29460
+    m_ExpandedIDs: 00000000f46e0000f66e0000f86e0000fa6e0000fc6e00001073000034730000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3220,9 +3220,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 8e810000
-    m_LastClickedInstanceID: 33166
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 94800000
+    m_LastClickedInstanceID: 32916
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300000000000088410200b84e0200126900000c300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -3519,7 +3519,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 810
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

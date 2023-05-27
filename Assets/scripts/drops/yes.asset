@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PUModel: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   PUName: yes
-  dropChance: 100
+  dropChance: 50
   buffSelection: 2
-  stating: 0
-  amount: 100
+  stateSelection: 1
+  amount: 1
   OGV: 0
   timeLength: 0

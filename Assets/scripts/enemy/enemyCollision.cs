@@ -15,6 +15,8 @@ public class enemyCollision : MonoBehaviour
     private AudioManager audManger;
 
     public GameObject deathEffect;
+    
+    
 
     private void Awake()
     {
