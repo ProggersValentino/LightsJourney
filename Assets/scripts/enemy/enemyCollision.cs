@@ -9,35 +9,25 @@ public class enemyCollision : MonoBehaviour
     public float damage;
     private float currentHealth;
 
-    //audio related
-    private NavMeshAI AITings;
-    private int audioIndex = -1;
-    private AudioManager audManger;
+    // //audio related
+    // private NavMeshAI AITings;
+    // private int audioIndex = -1;
+    // private AudioManager audManger;
 
     public GameObject deathEffect;
     
     
 
-    private void Awake()
-    {
-        audManger = FindObjectOfType<AudioManager>();
-    }
+    // private void Awake()
+    // {
+    //     // audManger = FindObjectOfType<AudioManager>();
+    // }
 
     private void Start()
     {
         currentHealth = stats.maxHealth;
-        AITings = FindObjectOfType<NavMeshAI>();
-        Debug.Log("audioIndex");
     }
-
-    private void Update()
-    {
-        if (audioIndex == -1)
-        {
-            audioIndex = AITings.audioIndex;
-            // Debug.Log(audioIndex);
-        }
-    }
+    
 
     private void OnCollisionEnter(Collision other)
     {

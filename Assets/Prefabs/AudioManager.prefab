@@ -45,31 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776730d1652ce9d4495b94b8061d9c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SFX:
-  - AudioType: gamer
-    unit: {fileID: 4721208179975993553, guid: f793dac2e31a56940a2185d476ffb103, type: 3}
-    unitsSource: {fileID: 1500350944, guid: f793dac2e31a56940a2185d476ffb103, type: 3}
-    audio:
-    - {fileID: 8300000, guid: 2237f74dcaad86e41afa2aae9e8f89c0, type: 3}
-    - {fileID: 8300000, guid: a92df5cd46eaae84ba9961063f6e5ddc, type: 3}
-    - {fileID: 8300000, guid: 2ab362e11c678e548aef62662d52d1b1, type: 3}
-    audioLength: 0
-  - AudioType: 
-    unit: {fileID: 0}
-    unitsSource: {fileID: 0}
-    audio:
-    - {fileID: 8300000, guid: 2237f74dcaad86e41afa2aae9e8f89c0, type: 3}
-    - {fileID: 8300000, guid: a92df5cd46eaae84ba9961063f6e5ddc, type: 3}
-    - {fileID: 8300000, guid: 2ab362e11c678e548aef62662d52d1b1, type: 3}
-    audioLength: 0
-  - AudioType: 
-    unit: {fileID: 0}
-    unitsSource: {fileID: 0}
-    audio:
-    - {fileID: 8300000, guid: 2237f74dcaad86e41afa2aae9e8f89c0, type: 3}
-    - {fileID: 8300000, guid: a92df5cd46eaae84ba9961063f6e5ddc, type: 3}
-    - {fileID: 8300000, guid: 2ab362e11c678e548aef62662d52d1b1, type: 3}
-    audioLength: 0
+  SFX: []
   isPlaying: 0
 --- !u!82 &1369770571848342867
 AudioSource:

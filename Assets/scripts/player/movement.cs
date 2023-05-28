@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class movement : MonoBehaviour
@@ -45,10 +46,15 @@ public class movement : MonoBehaviour
     public float maxSlopeAngle;
     private RaycastHit slopeHit; //detects whether slope has been interacted with
 
+    //debug tools
+    public GameObject enemyPref;
+    
+    
 
     [Header("Keybinds")]
     public List<bindingKeys> keyBinds = new List<bindingKeys>();
     // public KeyCode jumpKey = KeyCode.Space;
+    
     
     //advance movement related
     public moveState currentState;
@@ -131,6 +137,11 @@ public class movement : MonoBehaviour
         if (Input.GetKeyUp(keyBinds[2].keyCode))
         {
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+        }
+
+        if (Input.GetKeyDown(keyBinds[3].keyCode))
+        {
+            Instantiate(enemyPref, new Vector3(10, 10, 0), Quaternion.identity);
         }
     }
 
