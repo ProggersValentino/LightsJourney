@@ -27,5 +27,3 @@ MonoBehaviour:
   range: 0
   dmg: 0
   recoilForce: 0
-  showBulletVariables: 1
-  showRaycastVariables: 0
