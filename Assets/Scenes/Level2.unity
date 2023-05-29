@@ -28721,6 +28721,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8752144896350886514, guid: 27a8c81525e44f944b21a5df0a5c7968,
         type: 3}
+      propertyPath: regenAfterSec
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8752144896350886514, guid: 27a8c81525e44f944b21a5df0a5c7968,
+        type: 3}
       propertyPath: manageDownSoldiers
       value: 
       objectReference: {fileID: 1151931484}
@@ -28733,6 +28738,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 493
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255236568349397952, guid: 27a8c81525e44f944b21a5df0a5c7968,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255236568349397952, guid: 27a8c81525e44f944b21a5df0a5c7968,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255236568349397952, guid: 27a8c81525e44f944b21a5df0a5c7968,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5255236568349397952, guid: 27a8c81525e44f944b21a5df0a5c7968,
         type: 3}
@@ -47333,6 +47353,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8752144896350886514, guid: 27a8c81525e44f944b21a5df0a5c7968,
         type: 3}
+      propertyPath: regenAfterSec
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8752144896350886514, guid: 27a8c81525e44f944b21a5df0a5c7968,
+        type: 3}
       propertyPath: manageDownSoldiers
       value: 
       objectReference: {fileID: 1151931484}
@@ -47345,6 +47370,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255236568349397952, guid: 27a8c81525e44f944b21a5df0a5c7968,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255236568349397952, guid: 27a8c81525e44f944b21a5df0a5c7968,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5255236568349397952, guid: 27a8c81525e44f944b21a5df0a5c7968,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5255236568349397952, guid: 27a8c81525e44f944b21a5df0a5c7968,
         type: 3}

@@ -14,14 +14,6 @@ public class GatewaySys : MonoBehaviour
     private BoxCollider portal;
 
     public interact rayInformation;
-    
-    //wayfinder related
-    public GameObject[] allObjects;
-    public GameObject nearestObj;
-
-    public float distance;
-    public float nearestDistance;
-    
 
     public enum doorState
     {
@@ -34,7 +26,6 @@ public class GatewaySys : MonoBehaviour
     private void Start()
     {
         resetKCol();
-        allObjects = GameObject.FindGameObjectsWithTag("key");
         doorMesh.SetActive(false);
         portal = GetComponent<BoxCollider>();
         portal.enabled = false;
@@ -44,7 +35,6 @@ public class GatewaySys : MonoBehaviour
     {
         // unlockingDoor();
         doorHandler();
-        wayFinder();
     }
 
     void doorHandler()
@@ -70,26 +60,6 @@ public class GatewaySys : MonoBehaviour
         else
         {
             currentDoor = doorState.locked;
-        }
-    }
-    
-    //locates the nearest key from the portal
-    void wayFinder()
-    {
-        Debug.Log("hi");
-        for (int i = 0; i < allObjects.Length; i++)
-        {
-            //grabs the distances of objects
-            distance = Vector3.Distance(this.transform.position, allObjects[i].transform.position);
-            
-            //calculates to see which is the closest
-            if (distance < nearestDistance)
-            {
-                nearestObj = allObjects[i];
-                Debug.Log(nearestObj);
-                nearestDistance = distance;
-            }
-            
         }
     }
 
