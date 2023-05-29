@@ -56,7 +56,6 @@ public class GatewaySys : MonoBehaviour
             currentDoor = doorState.unlocked;
             doorMesh.SetActive(true);
             portal.enabled = true;
-
         }
         else
         {
@@ -81,7 +80,7 @@ public class GatewaySys : MonoBehaviour
         if (rayInformation.rayHit.collider.name == "KeyAlter_Mid")
         {
             accessingParticles(keyGuidance[2]);
-            Debug.Log(keyGuidance[2 ].name);
+            Debug.Log(keyGuidance[2].name);
         }
         
     }
