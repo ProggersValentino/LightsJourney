@@ -3528,6 +3528,11 @@ PrefabInstance:
       objectReference: {fileID: 812476897}
     - target: {fileID: 341848364260245435, guid: 6304e8cf153615f47a79a8d9f3c01ce7,
         type: 3}
+      propertyPath: gunInfo
+      value: 
+      objectReference: {fileID: 812476897}
+    - target: {fileID: 341848364260245435, guid: 6304e8cf153615f47a79a8d9f3c01ce7,
+        type: 3}
       propertyPath: stamina
       value: 
       objectReference: {fileID: 1576133343}
@@ -3563,6 +3568,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6304e8cf153615f47a79a8d9f3c01ce7, type: 3}
+--- !u!114 &106367929 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 341848364260245435, guid: 6304e8cf153615f47a79a8d9f3c01ce7,
+    type: 3}
+  m_PrefabInstance: {fileID: 106367928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a201202925029924c9c32c4b4a21b4b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &108261448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16854,6 +16871,7 @@ MonoBehaviour:
   lightBeam: {fileID: 0}
   mainBeam: {fileID: 0}
   lightRegen: 0
+  UIControl: {fileID: 0}
 --- !u!136 &383767054
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -28339,6 +28357,7 @@ MonoBehaviour:
   lightBeam: {fileID: 0}
   mainBeam: {fileID: 0}
   lightRegen: 0
+  UIControl: {fileID: 0}
 --- !u!136 &662976671
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -29523,6 +29542,7 @@ MonoBehaviour:
   lightBeam: {fileID: 0}
   mainBeam: {fileID: 0}
   lightRegen: 0
+  UIControl: {fileID: 0}
 --- !u!136 &687573450
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -30760,6 +30780,7 @@ MonoBehaviour:
   lightBeam: {fileID: 0}
   mainBeam: {fileID: 0}
   lightRegen: 0
+  UIControl: {fileID: 0}
 --- !u!136 &705000787
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -33151,6 +33172,7 @@ MonoBehaviour:
   lightBeam: {fileID: 0}
   mainBeam: {fileID: 0}
   lightRegen: 0
+  UIControl: {fileID: 0}
 --- !u!136 &790858424
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -45617,6 +45639,7 @@ MonoBehaviour:
   lightBeam: {fileID: 0}
   mainBeam: {fileID: 0}
   lightRegen: 0
+  UIControl: {fileID: 0}
 --- !u!136 &1103322885
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -55398,6 +55421,7 @@ MonoBehaviour:
   lightBeam: {fileID: 0}
   mainBeam: {fileID: 0}
   lightRegen: 0
+  UIControl: {fileID: 0}
 --- !u!136 &1374836204
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -56655,6 +56679,7 @@ MonoBehaviour:
   lightBeam: {fileID: 0}
   mainBeam: {fileID: 0}
   lightRegen: 0
+  UIControl: {fileID: 0}
 --- !u!136 &1399827411
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -62366,6 +62391,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8246183072915424924, guid: f49c63901b7897947bd2a574f48ffc07,
+        type: 3}
+      propertyPath: UIControl
+      value: 
+      objectReference: {fileID: 106367929}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f49c63901b7897947bd2a574f48ffc07, type: 3}
 --- !u!114 &1576133342 stripped
@@ -68617,6 +68647,7 @@ MonoBehaviour:
   lightBeam: {fileID: 0}
   mainBeam: {fileID: 0}
   lightRegen: 0
+  UIControl: {fileID: 0}
 --- !u!136 &1723299944
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -73286,6 +73317,7 @@ MonoBehaviour:
   lightBeam: {fileID: 0}
   mainBeam: {fileID: 0}
   lightRegen: 0
+  UIControl: {fileID: 0}
 --- !u!136 &1827744770
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -75219,6 +75251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -76667,6 +76700,7 @@ MonoBehaviour:
   lightBeam: {fileID: 0}
   mainBeam: {fileID: 0}
   lightRegen: 0
+  UIControl: {fileID: 0}
 --- !u!136 &1936657209
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -83232,6 +83266,7 @@ MonoBehaviour:
   lightBeam: {fileID: 0}
   mainBeam: {fileID: 0}
   lightRegen: 0
+  UIControl: {fileID: 0}
 --- !u!136 &2102954816
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -84620,6 +84655,7 @@ MonoBehaviour:
   lightBeam: {fileID: 0}
   mainBeam: {fileID: 0}
   lightRegen: 0
+  UIControl: {fileID: 0}
 --- !u!136 &2143971422
 CapsuleCollider:
   m_ObjectHideFlags: 0

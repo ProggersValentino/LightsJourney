@@ -20,8 +20,10 @@ public gunBehav ammo;
 
 public static StaminaBar instance;
 
+//nade cooldown setup
 [SerializeField] Image abImageCD;
-[SerializeField] private gunBehav gunInfo;
+[SerializeField] private gunBehav gunInfo; //access the players gun
+public Text nadeAmount;
 
 //ability cooldown related
 public bool isCD = false;
@@ -54,6 +56,8 @@ void Update()
     staminaBar.value = stamina.stamina;
     healthBar.value = hs.currentHealth;
     ammoSlider.value = ammo.bulletsLeft;
+
+    nadeAmount.text = gunInfo.bulletsLeft2.ToString();
     
     if (abDetect)
     {

@@ -5107,7 +5107,8 @@ MonoBehaviour:
   allowInvoke: 1
   lightBeam: {fileID: 8335411368788789748}
   mainBeam: {fileID: 6742444063305765650}
-  lightRegen: 2
+  lightRegen: 1
+  UIControl: {fileID: 0}
 --- !u!82 &6458738763006312058
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15590,9 +15591,9 @@ MonoBehaviour:
   physicalDmg: 5
   currentHealth: 0
   dmgTick: 0
-  healthRegenTick: 0
+  healthRegenTick: 0.1
   elapsedTime: 0
-  delayPeriod: 0
+  delayPeriod: 3
 --- !u!114 &1724240986119606104
 MonoBehaviour:
   m_ObjectHideFlags: 0

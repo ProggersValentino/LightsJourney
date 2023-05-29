@@ -71,17 +71,18 @@ public class gunBehav : MonoBehaviour
     void PInput()
     {
         //checking to see if player is allowed to hold  down the button
-        if (primaryGun.allowButtonHold || secondaryGun.allowButtonHold)
+        if (primaryGun.allowButtonHold)
         {
-            shootingSecond = Input.GetKey(KeyCode.Mouse1);
             shooting = Input.GetKey(KeyCode.Mouse0);
         }
         else
         {
-            shootingSecond = Input.GetKeyDown(KeyCode.Mouse1);
             shooting = Input.GetKeyDown(KeyCode.Mouse0);
         }
-
+        
+        if(secondaryGun.allowButtonHold) shootingSecond = Input.GetKey(KeyCode.Mouse1);
+        else shootingSecond = Input.GetKeyDown(KeyCode.Mouse1);
+        
         //reloading input
         if(Input.GetKeyDown(KeyCode.R) && bulletsLeft < primaryGun.magSize && !reloading)
         {
