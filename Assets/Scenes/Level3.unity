@@ -16872,6 +16872,7 @@ MonoBehaviour:
   mainBeam: {fileID: 0}
   lightRegen: 0
   UIControl: {fileID: 0}
+  audioIndex: 0
 --- !u!136 &383767054
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -28358,6 +28359,7 @@ MonoBehaviour:
   mainBeam: {fileID: 0}
   lightRegen: 0
   UIControl: {fileID: 0}
+  audioIndex: 0
 --- !u!136 &662976671
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -29543,6 +29545,7 @@ MonoBehaviour:
   mainBeam: {fileID: 0}
   lightRegen: 0
   UIControl: {fileID: 0}
+  audioIndex: 0
 --- !u!136 &687573450
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -30781,6 +30784,7 @@ MonoBehaviour:
   mainBeam: {fileID: 0}
   lightRegen: 0
   UIControl: {fileID: 0}
+  audioIndex: 0
 --- !u!136 &705000787
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -33173,6 +33177,7 @@ MonoBehaviour:
   mainBeam: {fileID: 0}
   lightRegen: 0
   UIControl: {fileID: 0}
+  audioIndex: 0
 --- !u!136 &790858424
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -45640,6 +45645,7 @@ MonoBehaviour:
   mainBeam: {fileID: 0}
   lightRegen: 0
   UIControl: {fileID: 0}
+  audioIndex: 0
 --- !u!136 &1103322885
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -55422,6 +55428,7 @@ MonoBehaviour:
   mainBeam: {fileID: 0}
   lightRegen: 0
   UIControl: {fileID: 0}
+  audioIndex: 0
 --- !u!136 &1374836204
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -56680,6 +56687,7 @@ MonoBehaviour:
   mainBeam: {fileID: 0}
   lightRegen: 0
   UIControl: {fileID: 0}
+  audioIndex: 0
 --- !u!136 &1399827411
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -68648,6 +68656,7 @@ MonoBehaviour:
   mainBeam: {fileID: 0}
   lightRegen: 0
   UIControl: {fileID: 0}
+  audioIndex: 0
 --- !u!136 &1723299944
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -73318,6 +73327,7 @@ MonoBehaviour:
   mainBeam: {fileID: 0}
   lightRegen: 0
   UIControl: {fileID: 0}
+  audioIndex: 0
 --- !u!136 &1827744770
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -76701,6 +76711,7 @@ MonoBehaviour:
   mainBeam: {fileID: 0}
   lightRegen: 0
   UIControl: {fileID: 0}
+  audioIndex: 0
 --- !u!136 &1936657209
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -83267,6 +83278,7 @@ MonoBehaviour:
   mainBeam: {fileID: 0}
   lightRegen: 0
   UIControl: {fileID: 0}
+  audioIndex: 0
 --- !u!136 &2102954816
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -84656,6 +84668,7 @@ MonoBehaviour:
   mainBeam: {fileID: 0}
   lightRegen: 0
   UIControl: {fileID: 0}
+  audioIndex: 0
 --- !u!136 &2143971422
 CapsuleCollider:
   m_ObjectHideFlags: 0
