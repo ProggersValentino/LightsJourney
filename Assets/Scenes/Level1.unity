@@ -55271,6 +55271,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 184114394, guid: f49c63901b7897947bd2a574f48ffc07, type: 3}
+      propertyPath: keys
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
         type: 3}
       propertyPath: hoverUI
@@ -55290,6 +55294,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458738763122090666, guid: f49c63901b7897947bd2a574f48ffc07,
+        type: 3}
+      propertyPath: delayPeriod
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458738763122090666, guid: f49c63901b7897947bd2a574f48ffc07,
+        type: 3}
+      propertyPath: healthRegenTick
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6458738763122090667, guid: f49c63901b7897947bd2a574f48ffc07,
         type: 3}

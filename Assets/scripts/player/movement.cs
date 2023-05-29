@@ -47,7 +47,7 @@ public class movement : MonoBehaviour
     private RaycastHit slopeHit; //detects whether slope has been interacted with
 
     //debug tools
-    public GameObject enemyPref;
+    // public GameObject enemyPref;
     
     
 
@@ -139,10 +139,10 @@ public class movement : MonoBehaviour
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
         }
 
-        if (Input.GetKeyDown(keyBinds[3].keyCode))
-        {
-            Instantiate(enemyPref, new Vector3(10, 10, 0), Quaternion.identity);
-        }
+        // if (Input.GetKeyDown(keyBinds[3].keyCode))
+        // {
+        //     Instantiate(enemyPref, new Vector3(10, 10, 0), Quaternion.identity);
+        // }
     }
 
     void stateHandler()
