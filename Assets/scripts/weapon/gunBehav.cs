@@ -44,12 +44,32 @@ public class gunBehav : MonoBehaviour
     
     //ui related
     public StaminaBar UIControl;
+    
+    //audio things
+    private AudioManager audManager;
+    public int audioIndex;
+    
+    
     private void Awake() 
     {
         //ensuring mags are full
         bulletsLeft2 = secondaryGun.magSize;
         bulletsLeft = primaryGun.magSize;
         RTS = true;
+        
+        audManager = FindObjectOfType<AudioManager>();
+        audioIndex = audManager.SFX.FindIndex(sfx => sfx.unit == gameObject); //finds where its located in the audio manager list
+        Debug.Log(audioIndex);
+        
+        // //detecting if audioIndex will spit out an error 
+        if (audManager == null || audioIndex == -1 || audioIndex >= audManager.SFX.Count || audManager.SFX[audioIndex].unit != gameObject)
+        {
+            audIsManaged();
+        }
+        else
+        {
+            Debug.Log(audioIndex);
+        }
         // laserLine = GetComponent<LineRenderer>();
     }
 
@@ -59,7 +79,7 @@ public class gunBehav : MonoBehaviour
         {
             PInput();    
         }
-        
+
 
         // //set ammo display, it exists
         // if(ammoDisplay != null)
@@ -68,6 +88,21 @@ public class gunBehav : MonoBehaviour
         // }
     }
 
+    public void audIsManaged()
+    {
+        // audioIndex = audManager.SFX.FindIndex(sfx => sfx.unit == gameObject); //finds where its located in the audio manager list
+        if (audioIndex < 0 || audioIndex >= audManager.SFX.Count || audManager.SFX[audioIndex].unit != gameObject)
+        {
+            audManager.SFX.Add(new AudioUnits(gameObject, GetComponent<AudioSource>())); //adds the objects to the list
+            audioIndex = audManager.SFX.FindIndex(sfx => sfx.unit == gameObject); //finds where its located in the audio manager list
+            Debug.Log(audioIndex);
+            
+            audManager.LoadAudioClipsFromFolder("Weapon", audioIndex); //inputs the sounds within the list
+            audioIndex = audManager.SFX.Count - 1;
+        }
+        
+    }
+    
     void PInput()
     {
         //checking to see if player is allowed to hold  down the button
@@ -106,6 +141,8 @@ public class gunBehav : MonoBehaviour
                 mainBeam.Play();
                 StopAllCoroutines();
                 
+                audManager.playSFX(audioIndex, "Beam", false);
+                
                 //raycast gun
                 fireNonProj();
             }
@@ -116,6 +153,10 @@ public class gunBehav : MonoBehaviour
             StartCoroutine(regenLight());
             mainBeam.Stop();
             lightBeam.Stop(); //disables laser when player stops pressing fire button
+            
+            // GetComponent<AudioSource>().Stop();
+            
+            
         }
 
         if (RTS && shootingSecond && !reloading && bulletsLeft2 > 0)
