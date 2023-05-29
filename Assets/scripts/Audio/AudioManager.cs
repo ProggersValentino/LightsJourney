@@ -1,35 +1,15 @@
  using System;
- using System.Collections;
-using System.Collections.Generic;
- using System.IO;
+ using System.Collections.Generic;
  using System.Linq;
- using JetBrains.Annotations;
- using Microsoft.Win32.SafeHandles;
  using UnityEngine;
  using Random = UnityEngine.Random;
 
  public class AudioManager : MonoBehaviour
 {
-    // public static AudioManager instance;
     public List<AudioUnits> SFX;
     
     //checking to see if audio is playing
     public bool isPlaying;
-
-
-    // private void Awake()
-    // {
-    //     // if (instance == null)
-    //     // {
-    //     //     instance = this; 
-    //     //     
-    //     //     DontDestroyOnLoad(gameObject);
-    //     // }
-    //     // else
-    //     // {
-    //     //     Destroy(gameObject);
-    //     // }
-    // }
 
     public void playSFX(int index, string audioType, bool ovRide)
     {
@@ -58,60 +38,34 @@ using System.Collections.Generic;
         
         
     }
-    
+    //extracts desired audio 
     public void LoadAudioClipsFromFolder(string folderName, int index)
     {
-        string folderPath = Path.Combine(Application.streamingAssetsPath, folderName);
-        string[] audioFiles = Directory.GetFiles(folderPath, "*.wav", SearchOption.AllDirectories);
+        // string ghostsSounds = "Ghosts";
 
-        foreach (string audioFilePath in audioFiles)
+        AudioClip[] audioClip =
+            Resources.LoadAll(folderName, typeof(AudioClip)).Cast<AudioClip>()
+                .ToArray(); //extracts the data out of the desird file path 
+        
+        Debug.Log(audioClip.Length);
+        
+        foreach (AudioClip clip in audioClip)
         {
-            string audioFileName = Path.GetFileNameWithoutExtension(audioFilePath);
-
-            StartCoroutine(LoadAudioClip(audioFilePath, index));
+            SFX[index].audio.Add(clip);
         }
-    }
 
-    private IEnumerator LoadAudioClip(string audioFilePath, int index)
-    {
-        string audioPath = "file://" + audioFilePath;
-        using (WWW www = new WWW(audioPath))
-        {
-            yield return www;
-
-            if (!string.IsNullOrEmpty(www.error))
-            {
-                Debug.LogWarning("Failed to load audio clip: " + www.error);
-                yield break;
-            }
-
-            AudioClip audioClip = www.GetAudioClip(false);
-
-            if (audioClip != null)
-            {
-                if (index < SFX.Count)
-                {
-                    if (SFX[index].audio == null)
-                    {
-                        SFX[index].audio = new AudioClip[0];
-                    }
-
-                    SFX[index].audio = SFX[index].audio.Append(audioClip).ToArray();
-                    SFX[index].AudioPath = audioPath;
-                }
-                else
-                {
-                    Debug.LogWarning("Index out of range: " + index);
-                }
-            }
-            else
-            {
-                Debug.LogWarning("Failed to load audio clip: " + audioPath);
-            }
-        }
     }
     
-
+    
+    //gets desired file path 
+    private string GetAudioResourcePath(string audioFilePath)
+    {
+        int startIndex = audioFilePath.IndexOf("Assets/Resources") + 17; // Update the start index
+        int length = audioFilePath.LastIndexOf('.') - startIndex;
+        string audioPath = audioFilePath.Substring(startIndex, length);
+        return audioPath;
+    }
+  
 }
 
  [Serializable]
@@ -122,7 +76,7 @@ using System.Collections.Generic;
      public AudioSource unitsSource;
      
      public string AudioPath { get; set; }
-     public AudioClip[] audio;
+     public List<AudioClip> audio = new List<AudioClip>();
      
      public float audioLength;
      
@@ -134,7 +88,7 @@ using System.Collections.Generic;
      public AudioUnits(string audioPath, AudioClip audioClip)
      {
          AudioPath = audioPath;
-         audio = new AudioClip[] { audioClip };
+         audio = new List<AudioClip>() { audioClip };
      }
 
      // Constructor with audio clips and other options
@@ -147,37 +101,90 @@ using System.Collections.Generic;
      
  }
  
+ //old system 
  
- 
+ // string folderPath = Path.Combine("Assets/Resources", folderName);
+ // string[] audioFiles = Directory.GetFiles(folderPath, "*.mp3", SearchOption.AllDirectories);
  //
-    // //extracts desired audio 
+ // foreach (string audioFilePath in audioFiles)
+ // {
+ //     string audioFileName = Path.GetFileNameWithoutExtension(audioFilePath);
+ //
+ //     string audioPath = GetAudioResourcePath(audioFilePath); // Get the audio resource path
+ //     
+ //     AudioClip audioClip = Resources.Load<AudioClip>(audioPath); //extracts the data out of the desird file path 
+ //     
+ //     Debug.Log(audioPath);
+ //     
+ //     if (audioClip != null)
+ //     {
+ //         if (index < SFX.Count)
+ //         {
+ //             // Initialize the audio array if it is null
+ //             if (SFX[index].audio == null)
+ //             {
+ //                 SFX[index].audio = new AudioClip[0];
+ //             }
+ //             
+ //             SFX[index].audio = SFX[index].audio.Append(audioClip).ToArray(); //adds clip to aduio list 
+ //             SFX[index].AudioPath = audioPath;
+ //         }
+ //         else
+ //         {
+ //             Debug.LogWarning("Index out of range: " + index);
+ //         }
+ //     }
+ //     else
+ //     {
+ //         Debug.LogWarning("Failed to load audio clip: " + audioPath);
+ //     }
+ // }
+ 
+ //attempted implementation of StreamingAssets
+
+ //
     // public void LoadAudioClipsFromFolder(string folderName, int index)
     // {
-    //     string folderPath = Path.Combine("Assets/Resources", folderName);
-    //     string[] audioFiles = Directory.GetFiles(folderPath, "*.mp3", SearchOption.AllDirectories);
+    //     string folderPath = Path.Combine(Application.streamingAssetsPath, folderName);
+    //     string[] audioFiles = Directory.GetFiles(folderPath, "*.wav", SearchOption.AllDirectories);
     //
     //     foreach (string audioFilePath in audioFiles)
     //     {
-    //         string audioFileName = Path.GetFileNameWithoutExtension(audioFilePath);
+    //         StartCoroutine(LoadAudioClip(audioFilePath, index));
+    //     }
+    // }
     //
-    //         string audioPath = GetAudioResourcePath(audioFilePath); // Get the audio resource path
-    //         
-    //         AudioClip audioClip = Resources.Load<AudioClip>(audioPath); //extracts the data out of the desird file path 
-    //         
-    //         Debug.Log(audioPath);
-    //         
+    // private IEnumerator LoadAudioClip(string audioFilePath, int index)
+    // {
+    //     string audioPath = "file://" + audioFilePath;
+    //
+    //     using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(audioPath, AudioType.WAV))
+    //     {
+    //         yield return www.SendWebRequest();
+    //
+    //         if (www.result != UnityWebRequest.Result.Success)
+    //         {
+    //             Debug.LogWarning("Failed to load audio clip: " + www.error);
+    //             yield break;
+    //         }
+    //
+    //         AudioClip audioClip = DownloadHandlerAudioClip.GetContent(www);
+    //
     //         if (audioClip != null)
     //         {
+    //             audioClip.LoadAudioData(); // Load the audio clip data
+    //
     //             if (index < SFX.Count)
     //             {
-    //                 // Initialize the audio array if it is null
     //                 if (SFX[index].audio == null)
     //                 {
     //                     SFX[index].audio = new AudioClip[0];
     //                 }
-    //                 
-    //                 SFX[index].audio = SFX[index].audio.Append(audioClip).ToArray(); //adds clip to aduio list 
-    //                 SFX[index].AudioPath = audioPath;
+    //
+    //                 List<AudioClip> audioList = SFX[index].audio.ToList(); // Convert array to a list
+    //                 audioList.Add(audioClip); // Append the loaded audio clip
+    //                 SFX[index].audio = audioList.ToArray(); // Convert back to an array
+    //                 SFX[index].AudioPath = audioFilePath;
     //             }
     //             else
     //             {
@@ -186,17 +193,9 @@ using System.Collections.Generic;
     //         }
     //         else
     //         {
-    //             Debug.LogWarning("Failed to load audio clip: " + audioPath);
+    //             Debug.LogWarning("Failed to load audio clip: " + audioFilePath);
     //         }
     //     }
     // }
     //
-    //
-    // //gets desired file path 
-    // private string GetAudioResourcePath(string audioFilePath)
-    // {
-    //     int startIndex = audioFilePath.IndexOf("Assets/Resources") + 17; // Update the start index
-    //     int length = audioFilePath.LastIndexOf('.') - startIndex;
-    //     string audioPath = audioFilePath.Substring(startIndex, length);
-    //     return audioPath;
-    // }
+

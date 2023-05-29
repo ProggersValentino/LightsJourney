@@ -108,7 +108,7 @@ public class NavMeshAI : MonoBehaviour
             audioIndex = audManager.SFX.FindIndex(sfx => sfx.unit == gameObject); //finds where its located in the audio manager list
             Debug.Log(audioIndex);
             
-            audManager.LoadAudioClipsFromFolder("ghostSFX", audioIndex); //inputs the sounds within the list
+            audManager.LoadAudioClipsFromFolder("Ghosts", audioIndex); //inputs the sounds within the list
             audioIndex = audManager.SFX.Count - 1;
         }
         

@@ -15590,6 +15590,9 @@ MonoBehaviour:
   physicalDmg: 5
   currentHealth: 0
   dmgTick: 0
+  healthRegenTick: 0
+  elapsedTime: 0
+  delayPeriod: 0
 --- !u!114 &1724240986119606104
 MonoBehaviour:
   m_ObjectHideFlags: 0
