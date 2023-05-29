@@ -41,6 +41,9 @@ public class gunBehav : MonoBehaviour
     
     //light regen
     public int lightRegen;
+    
+    //ui related
+    public StaminaBar UIControl;
     private void Awake() 
     {
         //ensuring mags are full
@@ -121,6 +124,9 @@ public class gunBehav : MonoBehaviour
             if (secondaryGun.projectileBased && !secondaryGun.rayBased && shootingSecond)
             {
                 fire();
+                //activate cooldown TImer
+                UIControl.abDetect = true;
+                
             }
         }
 
