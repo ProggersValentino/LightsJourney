@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2123077172}
   - component: {fileID: 2123077173}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,9 +59,9 @@ GameObject:
   - component: {fileID: -8752144896350886514}
   - component: {fileID: 2869419113532120166}
   - component: {fileID: -7329434047258793596}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: HolyCloud
-  m_TagString: Darkness
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +163,7 @@ BoxCollider:
   m_GameObject: {fileID: 3001564584997393008}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 6074763328696696223}
   - component: {fileID: 7428792466009710260}
   - component: {fileID: 6180535135632621847}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Box Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 2145723321246017377}
   - component: {fileID: 3241164269617282937}
   - component: {fileID: 3550506562856357710}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Fog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
