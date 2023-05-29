@@ -5297,9 +5297,9 @@ MonoBehaviour:
   - {fileID: 3330074293390038541}
   - {fileID: 5864394194861504868}
   keyGuidance:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 587140608626867104}
+  - {fileID: 781377445774343479}
+  - {fileID: 7549007524260395348}
   doorMesh: {fileID: 5610134693018691724}
   rayInformation: {fileID: 0}
   currentDoor: 0
@@ -21253,6 +21253,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1463072164512738746}
     m_Modifications:
+    - target: {fileID: 5587286367940404198, guid: 55d4ab212394f5d49af1b9805ac283d6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -162
+      objectReference: {fileID: 0}
+    - target: {fileID: 5587286367940404198, guid: 55d4ab212394f5d49af1b9805ac283d6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 6000192097570128618, guid: 55d4ab212394f5d49af1b9805ac283d6,
         type: 3}
       propertyPath: m_RootOrder
@@ -21266,7 +21276,7 @@ PrefabInstance:
     - target: {fileID: 6000192097570128618, guid: 55d4ab212394f5d49af1b9805ac283d6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 133
+      value: 309.9
       objectReference: {fileID: 0}
     - target: {fileID: 6000192097570128618, guid: 55d4ab212394f5d49af1b9805ac283d6,
         type: 3}
@@ -21308,16 +21318,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6868267872972569676, guid: 55d4ab212394f5d49af1b9805ac283d6,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009115619640756996, guid: 55d4ab212394f5d49af1b9805ac283d6,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8651267662793372114, guid: 55d4ab212394f5d49af1b9805ac283d6,
         type: 3}
       propertyPath: m_Name
-      value: KeyDirectionParticleHolder 1
+      value: KeyDirectionParticleHolder Mid
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55d4ab212394f5d49af1b9805ac283d6, type: 3}
 --- !u!4 &4866415025089399404 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6000192097570128618, guid: 55d4ab212394f5d49af1b9805ac283d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1210355879809239174}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7549007524260395348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8651267662793372114, guid: 55d4ab212394f5d49af1b9805ac283d6,
     type: 3}
   m_PrefabInstance: {fileID: 1210355879809239174}
   m_PrefabAsset: {fileID: 0}
@@ -21328,6 +21354,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8091907616527701790}
     m_Modifications:
+    - target: {fileID: 5587286367940404198, guid: 55d4ab212394f5d49af1b9805ac283d6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -162
+      objectReference: {fileID: 0}
+    - target: {fileID: 5587286367940404198, guid: 55d4ab212394f5d49af1b9805ac283d6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 6000192097570128618, guid: 55d4ab212394f5d49af1b9805ac283d6,
         type: 3}
       propertyPath: m_RootOrder
@@ -21341,7 +21377,7 @@ PrefabInstance:
     - target: {fileID: 6000192097570128618, guid: 55d4ab212394f5d49af1b9805ac283d6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 133
+      value: 309.9
       objectReference: {fileID: 0}
     - target: {fileID: 6000192097570128618, guid: 55d4ab212394f5d49af1b9805ac283d6,
         type: 3}
@@ -21383,13 +21419,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6868267872972569676, guid: 55d4ab212394f5d49af1b9805ac283d6,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009115619640756996, guid: 55d4ab212394f5d49af1b9805ac283d6,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8651267662793372114, guid: 55d4ab212394f5d49af1b9805ac283d6,
         type: 3}
       propertyPath: m_Name
-      value: KeyDirectionParticleHolder 1
+      value: KeyDirectionParticleHolder L
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55d4ab212394f5d49af1b9805ac283d6, type: 3}
+--- !u!1 &587140608626867104 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8651267662793372114, guid: 55d4ab212394f5d49af1b9805ac283d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8082425723756104306}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2553116249004460184 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6000192097570128618, guid: 55d4ab212394f5d49af1b9805ac283d6,
@@ -21403,6 +21455,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7823947082743293346}
     m_Modifications:
+    - target: {fileID: 5587286367940404198, guid: 55d4ab212394f5d49af1b9805ac283d6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -162
+      objectReference: {fileID: 0}
+    - target: {fileID: 5587286367940404198, guid: 55d4ab212394f5d49af1b9805ac283d6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 6000192097570128618, guid: 55d4ab212394f5d49af1b9805ac283d6,
         type: 3}
       propertyPath: m_RootOrder
@@ -21416,7 +21478,7 @@ PrefabInstance:
     - target: {fileID: 6000192097570128618, guid: 55d4ab212394f5d49af1b9805ac283d6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 133
+      value: 309.9
       objectReference: {fileID: 0}
     - target: {fileID: 6000192097570128618, guid: 55d4ab212394f5d49af1b9805ac283d6,
         type: 3}
@@ -21458,13 +21520,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6868267872972569676, guid: 55d4ab212394f5d49af1b9805ac283d6,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009115619640756996, guid: 55d4ab212394f5d49af1b9805ac283d6,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8651267662793372114, guid: 55d4ab212394f5d49af1b9805ac283d6,
         type: 3}
       propertyPath: m_Name
-      value: KeyDirectionParticleHolder 1
+      value: KeyDirectionParticleHolder R
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55d4ab212394f5d49af1b9805ac283d6, type: 3}
+--- !u!1 &781377445774343479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8651267662793372114, guid: 55d4ab212394f5d49af1b9805ac283d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8275215606270053605}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2419433915798834703 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6000192097570128618, guid: 55d4ab212394f5d49af1b9805ac283d6,
