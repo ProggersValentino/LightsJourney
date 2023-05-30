@@ -15590,7 +15590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: e4470fa7416634e4ab1a56ab027cff9c, type: 2}
-  darkDmg: 0.03
+  darkDmg: 0.08
   physicalDmg: 5
   currentHealth: 0
   dmgTick: 0

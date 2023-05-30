@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.SceneManagement;
 
 public class collision : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class collision : MonoBehaviour
     public float healthRegenTick;
     public float elapsedTime;
     public float delayPeriod;
+
+    public SceneManage manageScene;
 
 
 
@@ -122,7 +125,9 @@ public class collision : MonoBehaviour
 
     public void die()
     {
-        Destroy(gameObject);
+        int index = SceneManager.GetActiveScene().buildIndex;
+
+        SceneManager.LoadScene(index);
     }
 
     IEnumerator darkOT()
