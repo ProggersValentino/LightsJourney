@@ -59,10 +59,10 @@ public class NavMeshAI : MonoBehaviour
         {
             audIsManaged();
         }
-        else
-        {
-            Debug.Log(audioIndex);
-        }
+        // else
+        // {
+        //     Debug.Log(audioIndex);
+        // }
     }
 
     void Update() 
@@ -74,7 +74,7 @@ public class NavMeshAI : MonoBehaviour
                 audIsManaged();
                 break;
         }
-        Debug.Log(audioIndex);
+        // Debug.Log(audioIndex);
         
         //setting the ranges for the sight range and attack range of the AI 
         playerISRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
@@ -106,7 +106,7 @@ public class NavMeshAI : MonoBehaviour
         {
             audManager.SFX.Add(new AudioUnits(gameObject, GetComponent<AudioSource>())); //adds the objects to the list
             audioIndex = audManager.SFX.FindIndex(sfx => sfx.unit == gameObject); //finds where its located in the audio manager list
-            Debug.Log(audioIndex);
+            // Debug.Log(audioIndex);
             
             audManager.LoadAudioClipsFromFolder("Ghosts", audioIndex); //inputs the sounds within the list
             audioIndex = audManager.SFX.Count - 1;

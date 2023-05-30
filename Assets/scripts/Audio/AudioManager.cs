@@ -21,17 +21,17 @@
         
         if (Time.time > audDel || ovRide)
         {
-            Debug.Log(SFX[index]);
+            // Debug.Log(SFX[index]);
             var filteredClips = SFX[index].audio.Where(clip => clip.name.Contains(audioType)).ToList();
             
-            Debug.Log(filteredClips.Count);
+            // Debug.Log(filteredClips.Count);
             
             int randClip = Random.Range(0, filteredClips.Count);
             AudioClip clipSele = filteredClips[randClip];
 
             SFX[index].unitsSource.PlayOneShot(clipSele);
             isPlaying = true;
-            Debug.Log(clipSele);
+            // Debug.Log(clipSele);
 
             SFX[index].audioLength = clipSele.length + Time.time;
         }
