@@ -20,6 +20,11 @@ public class SceneManage : MonoBehaviour
         {
             
         }
- 
-    
+
+        public void ChangeScene(string sceneToLoad)
+        {
+            SceneManager.LoadScene(sceneToLoad);
+
+        }
+
 }
