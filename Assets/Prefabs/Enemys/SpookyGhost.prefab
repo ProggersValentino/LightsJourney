@@ -238,6 +238,8 @@ MonoBehaviour:
   lightBeam: {fileID: 0}
   mainBeam: {fileID: 0}
   lightRegen: 0
+  UIControl: {fileID: 0}
+  audioIndex: 0
 --- !u!1 &4721208179975993553
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +378,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: c9de502ae490cab4b8eea0393976acc4, type: 2}
   damage: 100
-  AITings: {fileID: 4721208179975993566}
   deathEffect: {fileID: 2018559776533650180, guid: cc213bab58d4f984fbff73f80b53b31b,
     type: 3}
 --- !u!195 &4721208179975993561
