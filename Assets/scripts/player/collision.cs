@@ -12,7 +12,7 @@ public class collision : MonoBehaviour
     public float physicalDmg;
     public float currentHealth;
     public float dmgTick;
-    
+
     //regen related
     public float healthRegenTick;
     public float elapsedTime;
@@ -24,15 +24,19 @@ public class collision : MonoBehaviour
 
     //collection of keys 
     inventory keyColl;
+    inventory keysFound;
     
+    
+   
     //editing movement
     private movement playerMStat;
-    
 
+   
     private void Awake()
     {
         currentHealth = stats.maxHealth;
         keyColl = GetComponent<inventory>();
+        keysFound = GetComponent<inventory>();
         playerMStat = GetComponent<movement>();
     }
 
@@ -42,41 +46,53 @@ public class collision : MonoBehaviour
     }
 
     //when in fog
-   private void OnTriggerStay(Collider other)
-   {
-       if (other.CompareTag("Darkness"))
-       {
-           StartCoroutine(darkOT());
-           // playerMStat.walkSped = 5;
-           Debug.Log(currentHealth);
-       }
-       // else
-       // {
-       //     playerMStat.walkSped = 7;
-       // }
-   }
-    
-   //when interacting with keys
-   private void OnTriggerEnter(Collider other)
-   {
-       if (other.CompareTag("key"))
-       {
-           keyColl.keys++;
-           Destroy(other.gameObject);
-       }
-       // else if (other.CompareTag("k2"))
-       // {
-       //     keyColl.k2Found = true;
-       //     Debug.Log(keyColl.k2Found);
-       //     Destroy(other.gameObject);
-       // }
-       // else if (other.CompareTag("k3"))
-       // {
-       //     keyColl.k3Found = true;
-       //     Debug.Log(keyColl.k3Found);
-       //     Destroy(other.gameObject);
-       // }
-   }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Darkness"))
+        {
+            StartCoroutine(darkOT());
+            // playerMStat.walkSped = 5;
+            Debug.Log(currentHealth);
+        }
+        // else
+        // {
+        //     playerMStat.walkSped = 7;
+        // }
+    }
+
+    //when interacting with keys
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("key"))
+        {
+            keyColl.keys++;
+            keysFound.KeyFound();
+            Destroy(other.gameObject);
+        }
+        
+
+
+        //else if (other.CompareTag("key"))
+        //{
+        //    Key3.SetActive(true);
+
+        //}
+
+
+
+        // else if (other.CompareTag("k2"))
+        // {
+        //     keyColl.k2Found = true;
+        //     Debug.Log(keyColl.k2Found);
+        //     Destroy(other.gameObject);
+        // }
+        // else if (other.CompareTag("k3"))
+        // {
+        //     keyColl.k3Found = true;
+        //     Debug.Log(keyColl.k3Found);
+        //     Destroy(other.gameObject);
+        // }
+    }
 
     
    //when colliding physically with enemies
@@ -129,7 +145,7 @@ public class collision : MonoBehaviour
 
         SceneManager.LoadScene("LoseScene");
     }
-
+    
     IEnumerator darkOT()
     {
         yield return new WaitForSeconds(dmgTick);
