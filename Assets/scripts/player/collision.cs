@@ -127,7 +127,7 @@ public class collision : MonoBehaviour
     {
         int index = SceneManager.GetActiveScene().buildIndex;
 
-        SceneManager.LoadScene(index);
+        SceneManager.LoadScene("LoseScene");
     }
 
     IEnumerator darkOT()

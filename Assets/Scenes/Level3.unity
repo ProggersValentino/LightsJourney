@@ -56862,6 +56862,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 184114394, guid: f49c63901b7897947bd2a574f48ffc07, type: 3}
+      propertyPath: keys
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1724240986119606104, guid: f49c63901b7897947bd2a574f48ffc07,
         type: 3}
       propertyPath: hoverUI
