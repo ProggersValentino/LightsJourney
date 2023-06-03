@@ -35347,6 +35347,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 6458738763122090666, guid: f49c63901b7897947bd2a574f48ffc07,
+        type: 3}
+      propertyPath: darkDmg
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458738763122090666, guid: f49c63901b7897947bd2a574f48ffc07,
+        type: 3}
+      propertyPath: physicalDmg
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 6458738763122090671, guid: f49c63901b7897947bd2a574f48ffc07,
         type: 3}
       propertyPath: m_RootOrder
