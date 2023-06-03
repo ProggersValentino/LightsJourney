@@ -11,12 +11,11 @@ GameObject:
   - component: {fileID: 8553080103596626127}
   - component: {fileID: 7596459245751502397}
   - component: {fileID: 6110077321501388388}
-  - component: {fileID: 4095705342343423617}
   - component: {fileID: 1841626598835560297}
   - component: {fileID: 2599810947706071691}
   m_Layer: 6
   m_Name: ShadowBox
-  m_TagString: Darkness
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,26 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4095705342343423617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728062633416118655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcf3309b22e909b4e82e4de9c5bf21c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 40d19f5a6c6fb144caa99034b1fcf5bb, type: 2}
-  damage: 0
-  currentHealth: 0
-  volumetric: {fileID: 0}
-  laserCollider: {fileID: 0}
-  regenAfterSec: 10
-  timer: 0
-  manageDownSoldiers: {fileID: 0}
 --- !u!65 &1841626598835560297
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -147,6 +126,7 @@ GameObject:
   - component: {fileID: 6300042001259729514}
   - component: {fileID: -5843970487707449568}
   - component: {fileID: 6736155444735112135}
+  - component: {fileID: 1935299026523657292}
   m_Layer: 9
   m_Name: Ebullet
   m_TagString: bullet
@@ -262,6 +242,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: {fileID: 11400000, guid: 15296fb81771af14bb724477d901ab93, type: 2}
+--- !u!114 &1935299026523657292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3332197088016315777}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b42d30574a812942b42d99c6e673f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: 58a1a4fc5ecbe0341a5b51281c251fcb, type: 2}
+  damage: 0
+  deathEffect: {fileID: 0}
 --- !u!1 &6051563815925857839
 GameObject:
   m_ObjectHideFlags: 0

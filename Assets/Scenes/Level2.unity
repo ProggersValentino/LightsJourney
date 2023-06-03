@@ -41539,7 +41539,7 @@ PrefabInstance:
     - target: {fileID: 2203181328164120779, guid: 13bc92a8a8eb6564eaa8f35dd9d878c6,
         type: 3}
       propertyPath: maxEnemies
-      value: 8
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2203181328164120779, guid: 13bc92a8a8eb6564eaa8f35dd9d878c6,
         type: 3}
@@ -46639,7 +46639,7 @@ PrefabInstance:
     - target: {fileID: 2203181328164120779, guid: 13bc92a8a8eb6564eaa8f35dd9d878c6,
         type: 3}
       propertyPath: maxEnemies
-      value: 6
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2203181328164120779, guid: 13bc92a8a8eb6564eaa8f35dd9d878c6,
         type: 3}
@@ -47570,6 +47570,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203181328164120779, guid: 13bc92a8a8eb6564eaa8f35dd9d878c6,
+        type: 3}
+      propertyPath: maxEnemies
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2203181328164120779, guid: 13bc92a8a8eb6564eaa8f35dd9d878c6,
         type: 3}

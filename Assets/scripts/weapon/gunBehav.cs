@@ -278,6 +278,10 @@ public class gunBehav : MonoBehaviour
             {
                 rayHit.collider.GetComponent<enemyCollision>().TakeDamage(primaryGun.dmg);
             }
+            //else if (rayHit.collider.CompareTag("bullet"))
+            //{
+            //    rayHit.collider.GetComponent<enemyCollision>().TakeDamage(primaryGun.dmg);
+            //}
 
             // draw the laser line between the camera and the hit point
             // laserLine.SetPosition(0, ProjLaunchPoint.position);
