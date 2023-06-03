@@ -155,7 +155,8 @@ public class gunBehav : MonoBehaviour
             lightBeam.Stop(); //disables laser when player stops pressing fire button
             
             GetComponent<AudioSource>().Stop();
-            
+            //audManager.audDel = 0f;
+            audManager.playSFX(audioIndex, "Beam", true);
             
         }
 

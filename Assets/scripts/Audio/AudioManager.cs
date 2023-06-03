@@ -10,10 +10,10 @@
     
     //checking to see if audio is playing
     public bool isPlaying;
-
+    public float audDel;
     public void playSFX(int index, string audioType, bool ovRide)
     {
-        float audDel;
+        
 
         audDel = SFX[index].audioLength;
         

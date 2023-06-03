@@ -4825,6 +4825,7 @@ GameObject:
   - component: {fileID: 197367267192710258}
   - component: {fileID: 3947889766119063273}
   - component: {fileID: 4195351847951838534}
+  - component: {fileID: 3817660833055801306}
   m_Layer: 0
   m_Name: CollectableAmmo
   m_TagString: Untagged
@@ -4907,11 +4908,24 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7393425978952038369}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3817660833055801306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7393425978952038369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136c9ad527ed6544583d9114637ef947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PUEffect: {fileID: 0}
 --- !u!1 &7459791856074023236
 GameObject:
   m_ObjectHideFlags: 0
@@ -14634,6 +14648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CrystalBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5973644958015810464, guid: 12dbe20a583860c4fbcb1714e37eda85,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7262670676158935122, guid: 12dbe20a583860c4fbcb1714e37eda85,
         type: 3}

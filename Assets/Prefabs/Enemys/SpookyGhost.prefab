@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb28afc1b324cd4f8c301634890e8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PUGen: {fileID: 2005718570277215351, guid: b87aa5510bae38e4aadfb64907068142, type: 3}
+  PUGen: {fileID: 7393425978952038369, guid: 02ca04cf36c2c4246a29f85ea4d42acf, type: 3}
   lootList:
   - {fileID: 11400000, guid: 8fe8f90efbc4e0e428d0f8169917a585, type: 2}
 --- !u!82 &5984839712498792643
