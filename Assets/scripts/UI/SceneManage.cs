@@ -25,7 +25,7 @@ public class SceneManage : MonoBehaviour
 
         public void rageQuit()
         {
-            
+            Application.Quit();
         }
 
         public void ChangeScene(string sceneToLoad)

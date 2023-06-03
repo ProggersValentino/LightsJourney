@@ -21348,6 +21348,21 @@ PrefabInstance:
       propertyPath: objectToLookAt
       value: 
       objectReference: {fileID: 160968678}
+    - target: {fileID: 3220597604811726485, guid: 589e4cb3a87f0354bbcbdb350efd9ef8,
+        type: 3}
+      propertyPath: objectToLookAt
+      value: 
+      objectReference: {fileID: 2052818522}
+    - target: {fileID: 3336093741907597314, guid: 589e4cb3a87f0354bbcbdb350efd9ef8,
+        type: 3}
+      propertyPath: objectToLookAt
+      value: 
+      objectReference: {fileID: 582437661}
+    - target: {fileID: 5500965973288901729, guid: 589e4cb3a87f0354bbcbdb350efd9ef8,
+        type: 3}
+      propertyPath: objectToLookAt
+      value: 
+      objectReference: {fileID: 160968678}
     - target: {fileID: 5864394195823851870, guid: 589e4cb3a87f0354bbcbdb350efd9ef8,
         type: 3}
       propertyPath: k1Found
